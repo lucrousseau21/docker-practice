@@ -6,7 +6,7 @@ questions:
       - { value: 'A script that checks Docker configuration against CIS benchmarks', correct: true }
       - { value: 'A firewall for Docker containers', correct: false }
       - { value: 'A tool for encrypting Docker images', correct: false }
-    help: https://github.com/docker/docker-bench-security
+    help: https://docs.docker.com/engine/security/
 
   - uuid: e3b4328f-81f3-4780-a563-3fd6c1e486a1
     question: What does CIS stand for in the context of Docker security?
@@ -15,7 +15,7 @@ questions:
       - { value: 'Center for Internet Security', correct: true }
       - { value: 'Certified Installation Standard', correct: false }
       - { value: 'Container Isolation System', correct: false }
-    help: https://www.cisecurity.org/benchmark/docker
+    help: https://docs.docker.com/engine/security/
 
   - uuid: 38cfe9a5-57c8-4aa4-a549-f6273838f630
     question: How do you run Docker Bench for Security?
@@ -24,7 +24,7 @@ questions:
       - { value: 'docker run -it --net host --pid host --userns host --cap-add audit_control ...', correct: true }
       - { value: 'docker bench start', correct: false }
       - { value: 'docker security audit', correct: false }
-    help: https://github.com/docker/docker-bench-security
+    help: https://docs.docker.com/engine/security/
 
   - uuid: c7fae985-49d2-416a-a8be-c60cad44e57a
     question: What areas does the CIS Docker Benchmark cover?
@@ -33,7 +33,7 @@ questions:
       - { value: 'Host configuration, Docker daemon, images, containers, security operations', correct: true }
       - { value: 'Only network security', correct: false }
       - { value: 'Only image scanning', correct: false }
-    help: https://www.cisecurity.org/benchmark/docker
+    help: https://docs.docker.com/engine/security/
 
   - uuid: 09965905-4a39-4620-a677-8f8ba35bfcc9
     question: What types of results does Docker Bench for Security provide?
@@ -42,7 +42,7 @@ questions:
       - { value: 'PASS, WARN, INFO, and NOTE', correct: true }
       - { value: 'Only critical and non-critical', correct: false }
       - { value: 'Only numerical scores', correct: false }
-    help: https://github.com/docker/docker-bench-security
+    help: https://docs.docker.com/engine/security/
 
   - uuid: 4b7f2447-c6f8-401e-bd8c-36e54e3cca57
     question: Is Docker Bench for Security an official Docker product?
@@ -51,7 +51,7 @@ questions:
       - { value: 'Yes, it is maintained by Docker', correct: true }
       - { value: 'Only for Docker Enterprise', correct: false }
       - { value: 'Only for Kubernetes', correct: false }
-    help: https://github.com/docker/docker-bench-security
+    help: https://docs.docker.com/engine/security/
 
   - uuid: 4f170ef5-1223-4628-a41a-3b91d4df7d94
     question: What privileges does Docker Bench for Security need to run?
@@ -60,7 +60,7 @@ questions:
       - { value: 'Access to host namespaces and Docker socket', correct: true }
       - { value: 'Only network access', correct: false }
       - { value: 'Only file system access', correct: false }
-    help: https://github.com/docker/docker-bench-security
+    help: https://docs.docker.com/engine/security/
 
   - uuid: 3c8da574-daf2-4ac9-926e-b331c72aeb09
     question: Can Docker Bench for Security automatically fix issues it finds?
@@ -69,7 +69,7 @@ questions:
       - { value: 'No, it only reports issues that need manual remediation', correct: true }
       - { value: 'Only critical issues', correct: false }
       - { value: 'Only on Ubuntu systems', correct: false }
-    help: https://github.com/docker/docker-bench-security
+    help: https://docs.docker.com/engine/security/
 
   - uuid: f80cdde9-1f96-4820-bdb5-c804ff5d556f
     question: How often should you run Docker Bench for Security?
@@ -78,7 +78,7 @@ questions:
       - { value: 'Regularly as part of security audits and compliance checks', correct: true }
       - { value: 'Only after security incidents', correct: false }
       - { value: 'It runs automatically in the background', correct: false }
-    help: https://github.com/docker/docker-bench-security
+    help: https://docs.docker.com/engine/security/
 
   - uuid: 3e5f5ad3-937a-4fe3-b9c2-4a6a514e5e31
     question: Which CIS Docker Benchmark section addresses Docker daemon configuration?
@@ -87,4 +87,4 @@ questions:
       - { value: 'Section 2', correct: true }
       - { value: 'Section 5', correct: false }
       - { value: 'Section 7', correct: false }
-    help: https://www.cisecurity.org/benchmark/docker
+    help: https://docs.docker.com/engine/security/
