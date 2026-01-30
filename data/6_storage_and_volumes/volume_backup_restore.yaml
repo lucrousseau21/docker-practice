@@ -1,0 +1,99 @@
+questions:
+  - uuid: 8404ecc1-81c7-4aba-8d58-120b7308173e
+    question: What is the recommended way to backup a Docker volume?
+    answers:
+      - { value: 'Copy files directly from /var/lib/docker/volumes/', correct: false }
+      - { value: 'Mount the volume to a container and tar the contents', correct: true }
+      - { value: 'Use docker volume backup command', correct: false }
+      - { value: 'Volumes cannot be backed up', correct: false }
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+
+  - uuid: 5bcbcea0-f84e-4998-88ba-9d4f1c71c40d
+    question: Which command pattern is commonly used to backup a volume?
+    answers:
+      - { value: 'docker volume cp myvolume /backup', correct: false }
+      - { value: 'docker run --rm -v myvolume:/data -v $(pwd):/backup busybox tar czf /backup/backup.tar.gz /data', correct: true }
+      - { value: 'docker backup myvolume > backup.tar', correct: false }
+      - { value: 'docker export myvolume backup.tar', correct: false }
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+
+  - uuid: 1c6e85ec-3728-4267-b0e8-6c41344ab5ee
+    question: How do you restore data to a Docker volume?
+    answers:
+      - { value: 'docker volume restore backup.tar myvolume', correct: false }
+      - { value: 'Mount the volume and extract the backup archive', correct: true }
+      - { value: 'Copy directly to /var/lib/docker/volumes/', correct: false }
+      - { value: 'Use docker import', correct: false }
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+
+  - uuid: 9f31a4b5-8ddc-4ca7-9577-c63a975b4140
+    question: Why use a temporary container for volume backup instead of accessing files directly?
+    answers:
+      - { value: 'It is faster', correct: false }
+      - { value: 'It avoids permission issues and maintains data integrity', correct: true }
+      - { value: 'Direct access is not possible', correct: false }
+      - { value: 'It is required by Docker', correct: false }
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+
+  - uuid: 9ed3b0aa-a804-4168-bf80-e1c599518042
+    question: What flag ensures a container is automatically removed after backup?
+    answers:
+      - { value: '--auto-remove', correct: false }
+      - { value: '--rm', correct: true }
+      - { value: '--delete', correct: false }
+      - { value: '--cleanup', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#clean-up---rm
+
+  - uuid: 95d14360-1e75-4a0a-bc5e-79beae0a4264
+    question: Can you backup a volume while a container is using it?
+    answers:
+      - { value: 'No, the container must be stopped', correct: false }
+      - { value: 'Yes, but it may capture inconsistent data', correct: true }
+      - { value: 'Only with --force flag', correct: false }
+      - { value: 'Docker prevents this automatically', correct: false }
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+
+  - uuid: 229e53cf-b783-4c1b-b75d-38e0c843d6f4
+    question: How can you copy data from one volume to another?
+    answers:
+      - { value: 'docker volume copy vol1 vol2', correct: false }
+      - { value: 'Mount both volumes to a container and copy data', correct: true }
+      - { value: 'Use docker cp between volumes', correct: false }
+      - { value: 'Volumes cannot be copied', correct: false }
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+
+  - uuid: dc7a3035-23d4-4b7b-b065-9d745e176494
+    question: What is a best practice when backing up database volumes?
+    answers:
+      - { value: 'Backup while the database is running', correct: false }
+      - { value: 'Stop or pause writes, or use application-specific backup tools', correct: true }
+      - { value: 'Always use tar compression', correct: false }
+      - { value: 'Databases cannot be backed up', correct: false }
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+
+  - uuid: 54219e6e-a344-4438-b0f6-0c1fae7867a6
+    question: Which image is commonly used for volume backup operations due to its small size?
+    answers:
+      - { value: 'ubuntu', correct: false }
+      - { value: 'alpine or busybox', correct: true }
+      - { value: 'nginx', correct: false }
+      - { value: 'debian', correct: false }
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+
+  - uuid: dc9a7d77-a944-4c15-83f7-22bfe5b9697d
+    question: How do you migrate a volume to a different Docker host?
+    answers:
+      - { value: 'Use docker volume export/import', correct: false }
+      - { value: 'Backup the volume, transfer the archive, and restore on the new host', correct: true }
+      - { value: 'Copy /var/lib/docker/volumes/ between hosts', correct: false }
+      - { value: 'Volumes cannot be migrated', correct: false }
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes
+
+  - uuid: 37fd848f-6b68-4394-bd34-26ef48852877
+    question: What is the purpose of using --volumes-from in backup scenarios?
+    answers:
+      - { value: 'To create a new volume', correct: false }
+      - { value: 'To mount all volumes from another container', correct: true }
+      - { value: 'To delete volumes', correct: false }
+      - { value: 'To compress volumes', correct: false }
+    help: https://docs.docker.com/storage/volumes/#back-up-restore-or-migrate-data-volumes

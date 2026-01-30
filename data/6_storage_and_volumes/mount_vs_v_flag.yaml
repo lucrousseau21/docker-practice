@@ -1,0 +1,108 @@
+questions:
+  - uuid: d8568baf-1f8d-4a48-b092-06c060c4d8e8
+    question: What is the main difference between the -v and --mount syntax?
+    answers:
+      - { value: 'They are completely different commands', correct: false }
+      - { value: '--mount is more explicit and verbose; -v is more concise', correct: true }
+      - { value: '-v is deprecated', correct: false }
+      - { value: '--mount only works in Swarm', correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: caa310bd-a3af-4ab1-8c23-3d452afc6435
+    question: Which flag is recommended for new users according to Docker documentation?
+    answers:
+      - { value: '-v flag', correct: false }
+      - { value: '--mount flag', correct: true }
+      - { value: 'Both are equally recommended', correct: false }
+      - { value: 'Neither, use Dockerfile VOLUME', correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: ba16368c-f8e9-4de3-a0e6-3ae85ba844a1
+    question: How do you create a named volume using the -v syntax?
+    answers:
+      - { value: 'docker run -v myvolume:/data ...', correct: true }
+      - { value: 'docker run -v name=myvolume:/data ...', correct: false }
+      - { value: 'docker run -v /data:myvolume ...', correct: false }
+      - { value: 'docker run --volume myvolume /data ...', correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: 1a8df090-90e9-4d72-921e-75ceba2ba345
+    question: How do you create a named volume using the --mount syntax?
+    answers:
+      - { value: '--mount myvolume:/data', correct: false }
+      - { value: '--mount type=volume,source=myvolume,target=/data', correct: true }
+      - { value: '--mount volume=myvolume,path=/data', correct: false }
+      - { value: '--mount name=myvolume,destination=/data', correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: 2f00164b-967f-4210-9c14-22e9cab7a26c
+    question: How do you create a bind mount using the -v syntax?
+    answers:
+      - { value: 'docker run -v /host/path:/container/path ...', correct: true }
+      - { value: 'docker run -v bind:/host/path:/container/path ...', correct: false }
+      - { value: 'docker run -v /container/path:/host/path ...', correct: false }
+      - { value: 'docker run --bind /host/path:/container/path ...', correct: false }
+    help: https://docs.docker.com/storage/bind-mounts/
+
+  - uuid: a024d741-7d4b-4f89-9a10-d81f55435e65
+    question: How do you create a bind mount using the --mount syntax?
+    answers:
+      - { value: '--mount /host/path:/container/path', correct: false }
+      - { value: '--mount type=bind,source=/host/path,target=/container/path', correct: true }
+      - { value: '--mount bind=/host/path,to=/container/path', correct: false }
+      - { value: '--mount mode=bind,src=/host/path,dst=/container/path', correct: false }
+    help: https://docs.docker.com/storage/bind-mounts/
+
+  - uuid: bfa3c2a1-6857-4cd2-b9ff-b9865bfb6daa
+    question: What happens with -v if the volume does not exist?
+    answers:
+      - { value: 'Docker returns an error', correct: false }
+      - { value: 'Docker automatically creates the volume', correct: true }
+      - { value: 'Docker creates a bind mount instead', correct: false }
+      - { value: 'Docker asks for user confirmation', correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: 2c57743f-c06e-4123-ac73-50763360a166
+    question: How do you make a volume read-only with -v?
+    answers:
+      - { value: 'docker run -v myvolume:/data:ro ...', correct: true }
+      - { value: 'docker run -v myvolume:/data:readonly ...', correct: false }
+      - { value: 'docker run -v myvolume:/data --read-only ...', correct: false }
+      - { value: 'Volumes cannot be read-only', correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: 2e24dd18-7a81-49fb-aedd-2f2973fdc9f8
+    question: How do you make a volume read-only with --mount?
+    answers:
+      - { value: '--mount type=volume,source=myvolume,target=/data,ro', correct: false }
+      - { value: '--mount type=volume,source=myvolume,target=/data,readonly', correct: true }
+      - { value: '--mount type=volume,source=myvolume,target=/data:ro', correct: false }
+      - { value: '--mount type=volume,source=myvolume,target=/data,mode=ro', correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: fc39db6e-026a-46cb-aed3-284c1587e2ee
+    question: Which syntax provides better error messages when there are configuration issues?
+    answers:
+      - { value: '-v syntax', correct: false }
+      - { value: '--mount syntax', correct: true }
+      - { value: 'Both provide the same errors', correct: false }
+      - { value: 'Neither provides errors', correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: bd68ad02-f2b4-456e-aae4-9598a421b8e4
+    question: Can you use -v and --mount in the same docker run command?
+    answers:
+      - { value: 'No, only one is allowed', correct: false }
+      - { value: 'Yes, you can use both', correct: true }
+      - { value: 'Only in Swarm mode', correct: false }
+      - { value: 'Only with bind mounts', correct: false }
+    help: https://docs.docker.com/storage/volumes/
+
+  - uuid: fa696605-3ced-4026-898d-74b65e856278
+    question: Which syntax is required for Docker Swarm services?
+    answers:
+      - { value: '-v flag', correct: false }
+      - { value: '--mount flag', correct: true }
+      - { value: 'Both work in Swarm', correct: false }
+      - { value: 'Volumes are not supported in Swarm', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/service_create/

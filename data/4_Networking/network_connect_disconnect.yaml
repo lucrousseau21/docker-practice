@@ -1,0 +1,90 @@
+questions:
+  - uuid: c370dcf5-7ea3-4587-9575-09b5f6f14fcc
+    question: Which command connects a running container to an existing network?
+    answers:
+      - { value: 'docker attach <container> <network>', correct: false }
+      - { value: 'docker network connect <network> <container>', correct: true }
+      - { value: 'docker connect <network> <container>', correct: false }
+      - { value: 'docker container connect <network>', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/
+
+  - uuid: 88346aad-6075-4bcc-91f0-66ad183e1f07
+    question: Can a container be connected to multiple networks simultaneously?
+    answers:
+      - { value: 'No, only one network per container', correct: false }
+      - { value: 'Yes, using multiple docker network connect commands', correct: true }
+      - { value: 'Only in Swarm mode', correct: false }
+      - { value: 'Only user-defined bridge networks', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/
+
+  - uuid: 5c7c6b27-8fbe-44bf-a3bd-14ffe3f72ce0
+    question: Which command disconnects a container from a network?
+    answers:
+      - { value: 'docker network remove <network> <container>', correct: false }
+      - { value: 'docker network disconnect <network> <container>', correct: true }
+      - { value: 'docker disconnect <container> <network>', correct: false }
+      - { value: 'docker container detach <network>', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_disconnect/
+
+  - uuid: 4f9429c3-5217-48db-8378-efcf09e070d5
+    question: What happens to a running container when you disconnect it from its only network?
+    answers:
+      - { value: 'The container stops running', correct: false }
+      - { value: 'The container loses network connectivity but continues running', correct: true }
+      - { value: 'Docker automatically connects it to the default bridge', correct: false }
+      - { value: 'Docker returns an error', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_disconnect/
+
+  - uuid: 4adec5bb-ea4f-4ff2-81ef-f7e3865d33ed
+    question: Can you specify an IP address when connecting a container to a network?
+    answers:
+      - { value: 'No, IPs are always assigned automatically', correct: false }
+      - { value: 'Yes, using the --ip flag with docker network connect', correct: true }
+      - { value: 'Only on overlay networks', correct: false }
+      - { value: 'Only on macvlan networks', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/
+
+  - uuid: 888fc18d-2131-4e15-a875-addeefe78b6b
+    question: Can you add network aliases when connecting a container to a network?
+    answers:
+      - { value: 'No, aliases can only be set at container creation', correct: false }
+      - { value: 'Yes, using the --alias flag with docker network connect', correct: true }
+      - { value: 'Only on user-defined bridge networks', correct: false }
+      - { value: 'Only with overlay networks in Swarm', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/
+
+  - uuid: a7528ba8-4d29-4e26-89e9-69d8aff89b67
+    question: What happens if you try to connect a container to a network it's already connected to?
+    answers:
+      - { value: 'Docker creates a second connection', correct: false }
+      - { value: 'Docker returns an error', correct: true }
+      - { value: 'Docker silently ignores the command', correct: false }
+      - { value: 'Docker replaces the existing connection', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/
+
+  - uuid: f4048e23-4044-4ada-bef8-6c812ebee479
+    question: Can you force disconnect a container from a network?
+    answers:
+      - { value: 'No, disconnection requires container restart', correct: false }
+      - { value: 'Yes, using the --force flag with docker network disconnect', correct: true }
+      - { value: 'Only if the container is stopped', correct: false }
+      - { value: 'Force disconnect is not supported', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_disconnect/
+
+  - uuid: ebbe8c8f-8ecf-47e4-b395-648731a1ae58
+    question: How can you view which networks a container is connected to?
+    answers:
+      - { value: 'docker network ls', correct: false }
+      - { value: 'docker inspect <container>', correct: true }
+      - { value: 'docker network show <container>', correct: false }
+      - { value: 'docker ps --networks', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/inspect/
+
+  - uuid: 12f02a72-9dea-469a-8536-464a21e25bce
+    question: When would you dynamically connect a container to multiple networks?
+    answers:
+      - { value: 'When the container needs to communicate with services on different networks', correct: true }
+      - { value: 'To increase container performance', correct: false }
+      - { value: 'To enable privileged mode', correct: false }
+      - { value: 'To reduce memory usage', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/

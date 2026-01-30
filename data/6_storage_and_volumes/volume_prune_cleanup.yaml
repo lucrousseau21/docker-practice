@@ -1,0 +1,99 @@
+questions:
+  - uuid: 916a77ee-52af-46ec-8985-ecfbdacf69a3
+    question: What command removes all unused volumes?
+    answers:
+      - { value: 'docker volume clean', correct: false }
+      - { value: 'docker volume prune', correct: true }
+      - { value: 'docker volume rm --all', correct: false }
+      - { value: 'docker cleanup volumes', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
+
+  - uuid: 3dcd226c-b0c1-4818-a264-96828be0e3ff
+    question: What is considered an "unused" volume for docker volume prune?
+    answers:
+      - { value: 'Any volume older than 30 days', correct: false }
+      - { value: 'Volumes not mounted by any container', correct: true }
+      - { value: 'Empty volumes only', correct: false }
+      - { value: 'Anonymous volumes only', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
+
+  - uuid: a7f4c0c1-b086-44ec-a2a0-89950a39d0a5
+    question: Does docker volume prune prompt for confirmation by default?
+    answers:
+      - { value: 'No, it deletes immediately', correct: false }
+      - { value: 'Yes, unless --force or -f is used', correct: true }
+      - { value: 'Only for named volumes', correct: false }
+      - { value: 'Confirmation is not supported', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
+
+  - uuid: 4728b096-2224-4dea-a3cf-07ebd73afe61
+    question: How do you prune volumes without confirmation?
+    answers:
+      - { value: 'docker volume prune --yes', correct: false }
+      - { value: 'docker volume prune --force', correct: true }
+      - { value: 'docker volume prune --auto', correct: false }
+      - { value: 'docker volume prune --confirm=no', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
+
+  - uuid: 75650f48-4540-42a2-aa1d-883511f844aa
+    question: Can you filter which volumes to prune?
+    answers:
+      - { value: 'No, all unused volumes are pruned', correct: false }
+      - { value: 'Yes, using the --filter option', correct: true }
+      - { value: 'Only by name', correct: false }
+      - { value: 'Only by size', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
+
+  - uuid: 08e39477-c06d-493f-be66-73253bcac2bd
+    question: How do you prune only volumes with a specific label?
+    answers:
+      - { value: 'docker volume prune --label mylabel', correct: false }
+      - { value: 'docker volume prune --filter "label=mylabel"', correct: true }
+      - { value: 'docker volume prune --by-label mylabel', correct: false }
+      - { value: 'Labels cannot be used for filtering', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
+
+  - uuid: 5d1c9894-3420-46ca-8aeb-375da362c923
+    question: What happens if you prune a volume that contains important data?
+    answers:
+      - { value: 'Docker creates a backup automatically', correct: false }
+      - { value: 'The data is permanently deleted', correct: true }
+      - { value: 'The data is moved to trash', correct: false }
+      - { value: 'Docker prevents deletion of data-containing volumes', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
+
+  - uuid: f7be6ce0-5240-4958-a664-85a1dac4968b
+    question: Is docker volume prune safe to run in production?
+    answers:
+      - { value: 'Yes, always', correct: false }
+      - { value: 'Use with caution; ensure volumes are actually unused', correct: true }
+      - { value: 'No, never use in production', correct: false }
+      - { value: 'Only on Fridays', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_prune/
+
+  - uuid: 0b82438c-c03b-447c-bf8f-af950855bd50
+    question: What is the difference between docker volume prune and docker system prune?
+    answers:
+      - { value: 'They are the same command', correct: false }
+      - { value: 'docker system prune cleans volumes, images, containers; volume prune only volumes', correct: true }
+      - { value: 'docker volume prune also removes images', correct: false }
+      - { value: 'docker system prune does not affect volumes', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/system_prune/
+
+  - uuid: 57304136-528d-42ba-bf1f-4793196928a6
+    question: Does docker system prune remove volumes by default?
+    answers:
+      - { value: 'Yes, always', correct: false }
+      - { value: 'No, unless --volumes flag is added', correct: true }
+      - { value: 'Only anonymous volumes', correct: false }
+      - { value: 'Only unused volumes', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/system_prune/
+
+  - uuid: 35d520ff-1fb6-49ee-a803-0074403bfed6
+    question: How can you see which volumes would be pruned without actually deleting them?
+    answers:
+      - { value: 'docker volume prune --dry-run', correct: false }
+      - { value: 'docker volume ls --filter "dangling=true"', correct: true }
+      - { value: 'docker volume prune --preview', correct: false }
+      - { value: 'This is not possible', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/volume_ls/
