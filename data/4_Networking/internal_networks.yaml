@@ -1,0 +1,90 @@
+questions:
+  - uuid: 9f7a3e2c-8d1b-5e4a-6f9c-3d7a2e8b4f1c
+    question: What does the --internal flag do when creating a Docker network?
+    answers:
+      - { value: 'Disables all networking', correct: false }
+      - { value: 'Restricts external network access while allowing inter-container communication', correct: true }
+      - { value: 'Enables encryption', correct: false }
+      - { value: 'Creates a private subnet', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_create/
+
+  - uuid: 2e4a8f9c-7d1b-5e3a-9f6c-4d7a3e8b2f1c
+    question: Can containers on an internal network communicate with each other?
+    answers:
+      - { value: 'No, they are completely isolated', correct: false }
+      - { value: 'Yes, but they cannot access external networks', correct: true }
+      - { value: 'Only via the host', correct: false }
+      - { value: 'Only if using overlay networks', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_create/
+
+  - uuid: 5c8a9e4f-7d2b-1e3a-6f9c-3d8a5e7b2f4c
+    question: How do you create an internal Docker network?
+    answers:
+      - { value: 'docker network create --private mynet', correct: false }
+      - { value: 'docker network create --internal mynet', correct: true }
+      - { value: 'docker network create --isolated mynet', correct: false }
+      - { value: 'docker network create --no-external mynet', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_create/
+
+  - uuid: 1d7f4a9e-8c2b-5e3a-9f6c-2d8a4e7b3f1c
+    question: What is a common use case for internal networks?
+    answers:
+      - { value: 'To improve network performance', correct: false }
+      - { value: 'To isolate backend services that should not access the internet', correct: true }
+      - { value: 'To enable multi-host networking', correct: false }
+      - { value: 'To reduce container startup time', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_create/
+
+  - uuid: 6f3a2e9c-7d1b-4e8a-5f9c-3d7a2e8b1f4c
+    question: Can a container on an internal network access the host's network services?
+    answers:
+      - { value: 'Yes, always', correct: false }
+      - { value: 'No, external connectivity is blocked', correct: true }
+      - { value: 'Only on Linux hosts', correct: false }
+      - { value: 'Only if using --privileged flag', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_create/
+
+  - uuid: 9e8f7a4c-8d1b-5e3a-6f9c-4d7a3e8b2f1c
+    question: Can you connect a container to both an internal and external network?
+    answers:
+      - { value: 'No, only one network type is allowed', correct: false }
+      - { value: 'Yes, by connecting to multiple networks', correct: true }
+      - { value: 'Only in Swarm mode', correct: false }
+      - { value: 'Only with overlay networks', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/
+
+  - uuid: 3c9e4f8a-7d2b-5e1a-9f6c-2d8a5e7b3f4c
+    question: How can you verify if a network is internal?
+    answers:
+      - { value: 'docker network ls --internal', correct: false }
+      - { value: 'docker network inspect <network>', correct: true }
+      - { value: 'docker network show <network>', correct: false }
+      - { value: 'docker inspect --type=network <network>', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_inspect/
+
+  - uuid: 7d4f2a9e-8c1b-4e3a-6f9c-3d7a2e8b5f1c
+    question: What happens if you try to pull an image from a container on an internal network?
+    answers:
+      - { value: 'The pull succeeds normally', correct: false }
+      - { value: 'The pull fails due to no external network access', correct: true }
+      - { value: 'Docker uses the host network for the pull', correct: false }
+      - { value: 'The operation is queued until network is changed', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_create/
+
+  - uuid: 4e7a2f9c-8d1b-5e3a-9f6c-3d7a4e8b2f1c
+    question: Can internal networks be used with Docker Swarm services?
+    answers:
+      - { value: 'No, internal networks only work with standalone containers', correct: false }
+      - { value: 'Yes, Swarm services can use internal networks', correct: true }
+      - { value: 'Only on manager nodes', correct: false }
+      - { value: 'Only with replicated services', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_create/
+
+  - uuid: 8c2f1a9e-7d3b-5e4a-6f9c-2d8a5e7b3f1c
+    question: Which network driver(s) support the --internal flag?
+    answers:
+      - { value: 'Only bridge networks', correct: false }
+      - { value: 'Bridge and overlay networks', correct: true }
+      - { value: 'Only overlay networks', correct: false }
+      - { value: 'All network drivers', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_create/

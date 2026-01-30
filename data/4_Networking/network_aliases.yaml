@@ -1,0 +1,90 @@
+questions:
+  - uuid: 2f8a5e9c-7d3b-4e1a-9f6c-3a8d5e1b7c2f
+    question: What is the purpose of the --network-alias flag in Docker?
+    answers:
+      - { value: 'To create a new network', correct: false }
+      - { value: 'To assign an additional DNS name to a container', correct: true }
+      - { value: 'To change the network driver', correct: false }
+      - { value: 'To connect multiple networks to a container', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/run/#network
+
+  - uuid: 5b9e3f7a-4c1d-8e2b-6f9a-2d7c4e8b1f3a
+    question: How do you specify a network alias when creating a container?
+    answers:
+      - { value: 'docker run --name-alias myalias ...', correct: false }
+      - { value: 'docker run --network-alias myalias ...', correct: true }
+      - { value: 'docker run --dns-alias myalias ...', correct: false }
+      - { value: 'docker run --alias myalias ...', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/run/#network
+
+  - uuid: 8e4a7f2c-9d1b-5e3a-7f6c-1a9d4e8b2f5c
+    question: Can a single container have multiple network aliases?
+    answers:
+      - { value: 'No, only one alias is allowed per container', correct: false }
+      - { value: 'Yes, by specifying --network-alias multiple times', correct: true }
+      - { value: 'Only on overlay networks', correct: false }
+      - { value: 'Only if the container has multiple IPs', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/run/#network
+
+  - uuid: 1c7f9e4a-8d2b-5e3c-9f6a-4d1e7c8b2f3a
+    question: What happens when multiple containers use the same network alias?
+    answers:
+      - { value: 'Docker returns an error', correct: false }
+      - { value: 'Only the first container gets the alias', correct: false }
+      - { value: 'DNS queries return all matching container IPs (round-robin)', correct: true }
+      - { value: 'The last container overwrites previous aliases', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/#network-alias
+
+  - uuid: 3a8e5f1c-7d9b-4e2a-6f8c-2d5a9e7b1c4f
+    question: On which networks can you use the --network-alias flag?
+    answers:
+      - { value: 'Only on the default bridge network', correct: false }
+      - { value: 'On user-defined networks', correct: true }
+      - { value: 'Only on host network', correct: false }
+      - { value: 'Only on macvlan networks', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/run/#network
+
+  - uuid: 6f2e9a7c-4d1b-8e3c-5f9a-1d7c4e2b8f3a
+    question: How do network aliases differ from container names for DNS resolution?
+    answers:
+      - { value: 'Aliases cannot be used for DNS resolution', correct: false }
+      - { value: 'Multiple containers can share the same alias, but not the same name', correct: true }
+      - { value: 'Aliases only work with external DNS', correct: false }
+      - { value: 'There is no difference', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/#network-alias
+
+  - uuid: 9d4f7a2e-8c1b-5e3a-6f9c-3a7d2e8b4f1c
+    question: Can you add a network alias to a running container?
+    answers:
+      - { value: 'No, aliases can only be set at container creation', correct: false }
+      - { value: 'Yes, using docker network connect with --alias', correct: true }
+      - { value: 'Only by restarting the container', correct: false }
+      - { value: 'Only with docker update command', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/
+
+  - uuid: 4e8a2f9c-7d3b-1e5a-8f6c-2d9a5e7b3f1c
+    question: What command shows the network aliases assigned to a container?
+    answers:
+      - { value: 'docker network ls', correct: false }
+      - { value: 'docker inspect <container>', correct: true }
+      - { value: 'docker network alias <container>', correct: false }
+      - { value: 'docker ps --aliases', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/inspect/
+
+  - uuid: 7c1e4f8a-9d2b-5e3c-6f9a-1d4e8b2c7f3a
+    question: Why would you use network aliases in a microservices architecture?
+    answers:
+      - { value: 'To encrypt traffic between services', correct: false }
+      - { value: 'To enable load balancing across multiple service instances', correct: true }
+      - { value: 'To reduce container memory usage', correct: false }
+      - { value: 'To bypass network isolation', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/#network-alias
+
+  - uuid: 2f5a9e7c-8d1b-4e3a-6f8c-3d7a1e9b5f2c
+    question: What is the relationship between network aliases and Docker service discovery?
+    answers:
+      - { value: 'Aliases replace the need for service discovery', correct: false }
+      - { value: 'Aliases enhance service discovery by providing additional DNS names', correct: true }
+      - { value: 'Aliases are not related to service discovery', correct: false }
+      - { value: 'Service discovery disables network aliases', correct: false }
+    help: https://docs.docker.com/engine/reference/commandline/network_connect/#network-alias

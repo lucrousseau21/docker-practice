@@ -1,0 +1,99 @@
+questions:
+  - uuid: 7e9a3f2c-8d1b-5e4a-6f9c-3d7a2e8b4f1c
+    question: What is SELinux used for in Docker environments?
+    answers:
+      - { value: 'To manage container networks', correct: false }
+      - { value: 'To provide mandatory access control and label-based security', correct: true }
+      - { value: 'To encrypt container data', correct: false }
+      - { value: 'To manage container lifecycle', correct: false }
+    help: https://docs.docker.com/engine/security/selinux/
+
+  - uuid: 2e7a4f9c-8d1b-5e3a-9f6c-4d7a3e8b2f1c
+    question: How do you enable SELinux labeling for a container?
+    answers:
+      - { value: 'SELinux is enabled by default', correct: false }
+      - { value: 'Use --security-opt label=type:svirt_sandbox_file_t', correct: true }
+      - { value: 'Edit /etc/selinux/config', correct: false }
+      - { value: 'Install selinux-docker package', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#security-configuration
+
+  - uuid: 5c8a9e4f-7d2b-1e3a-6f9c-3d8a5e7b2f4c
+    question: What does the --security-opt flag allow you to configure?
+    answers:
+      - { value: 'Only firewall rules', correct: false }
+      - { value: 'SELinux labels, AppArmor profiles, seccomp profiles, and more', correct: true }
+      - { value: 'Only network encryption', correct: false }
+      - { value: 'Only user namespaces', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#security-configuration
+
+  - uuid: 1d4a7f9e-8c2b-5e3a-9f6c-2d8a4e7b3f1c
+    question: How do you disable SELinux labeling for a specific container?
+    answers:
+      - { value: 'docker run --no-selinux ...', correct: false }
+      - { value: 'docker run --security-opt label=disable ...', correct: true }
+      - { value: 'Edit daemon.json', correct: false }
+      - { value: 'SELinux cannot be disabled per container', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#security-configuration
+
+  - uuid: 6f3a2e9c-7d1b-4e8a-5f9c-3d7a2e8b1f4c
+    question: What is the difference between --security-opt and --cap-add?
+    answers:
+      - { value: 'They are the same thing', correct: false }
+      - { value: '--security-opt configures security modules; --cap-add adds Linux capabilities', correct: true }
+      - { value: '--security-opt is for Windows only', correct: false }
+      - { value: '--cap-add is deprecated', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#security-configuration
+
+  - uuid: 9e8a7f4c-8d1b-5e3a-6f9c-4d7a3e8b2f1c
+    question: How do you specify a custom seccomp profile using --security-opt?
+    answers:
+      - { value: '--security-opt seccomp=/path/to/profile.json', correct: true }
+      - { value: '--seccomp=/path/to/profile.json', correct: false }
+      - { value: '--security seccomp profile.json', correct: false }
+      - { value: '--profile seccomp=/path/to/profile.json', correct: false }
+    help: https://docs.docker.com/engine/security/seccomp/
+
+  - uuid: 3c9a4e8f-7d2b-5e1a-9f6c-2d8a5e7b3f4c
+    question: What does --security-opt no-new-privileges do?
+    answers:
+      - { value: 'Removes all capabilities', correct: false }
+      - { value: 'Prevents processes from gaining additional privileges', correct: true }
+      - { value: 'Disables networking', correct: false }
+      - { value: 'Forces read-only filesystem', correct: false }
+    help: https://docs.docker.com/engine/reference/run/#security-configuration
+
+  - uuid: 7d9a2f5e-8c1b-4e3a-6f9c-3d7a2e8b5f1c
+    question: How do you apply a custom AppArmor profile to a container?
+    answers:
+      - { value: '--apparmor=myprofile', correct: false }
+      - { value: '--security-opt apparmor=myprofile', correct: true }
+      - { value: '--profile apparmor:myprofile', correct: false }
+      - { value: 'AppArmor cannot be customized', correct: false }
+    help: https://docs.docker.com/engine/security/apparmor/
+
+  - uuid: 4e2a7f9c-8d1b-5e3a-9f6c-3d7a4e8b2f1c
+    question: Can you disable the default seccomp profile for a container?
+    answers:
+      - { value: 'No, it is always enforced', correct: false }
+      - { value: 'Yes, using --security-opt seccomp=unconfined', correct: true }
+      - { value: 'Only in rootless mode', correct: false }
+      - { value: 'Only with --privileged flag', correct: false }
+    help: https://docs.docker.com/engine/security/seccomp/
+
+  - uuid: 8c1a3f9e-7d2b-5e4a-6f9c-2d8a5e7b3f1c
+    question: What is the purpose of SELinux labels like svirt_sandbox_file_t?
+    answers:
+      - { value: 'To name containers', correct: false }
+      - { value: 'To control file access permissions for containerized processes', correct: true }
+      - { value: 'To configure networking', correct: false }
+      - { value: 'To set resource limits', correct: false }
+    help: https://docs.docker.com/engine/security/selinux/
+
+  - uuid: 5f8a9e3c-7d2b-4e1a-6f9c-3d7a5e8b2f4c
+    question: Which Linux distributions commonly use SELinux with Docker?
+    answers:
+      - { value: 'Ubuntu and Debian', correct: false }
+      - { value: 'RHEL, CentOS, and Fedora', correct: true }
+      - { value: 'Alpine Linux', correct: false }
+      - { value: 'Windows Subsystem for Linux', correct: false }
+    help: https://docs.docker.com/engine/security/selinux/

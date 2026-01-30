@@ -1,0 +1,90 @@
+questions:
+  - uuid: 4a9e7f3c-8d2b-5e1a-9f6c-3d7a2e8b4f1c
+    question: What is the primary use case for the ipvlan network driver?
+    answers:
+      - { value: 'To create isolated container networks', correct: false }
+      - { value: 'To assign containers their own MAC addresses on the physical network', correct: true }
+      - { value: 'To enable overlay networking in Swarm', correct: false }
+      - { value: 'To disable networking for containers', correct: false }
+    help: https://docs.docker.com/network/drivers/ipvlan/
+
+  - uuid: 7e2f9a5c-4d1b-8e3a-6f9c-2d8a5e7b1f3c
+    question: What are the two modes of operation for the ipvlan driver?
+    answers:
+      - { value: 'bridge and overlay', correct: false }
+      - { value: 'L2 and L3', correct: true }
+      - { value: 'host and container', correct: false }
+      - { value: 'internal and external', correct: false }
+    help: https://docs.docker.com/network/drivers/ipvlan/
+
+  - uuid: 1c8e4f9a-7d2b-5e3c-9f6a-4d1e7c2b8f3a
+    question: In ipvlan L2 mode, how do containers appear on the network?
+    answers:
+      - { value: 'They share the parent interface's MAC address', correct: true }
+      - { value: 'They each get a unique MAC address', correct: false }
+      - { value: 'They cannot communicate with external networks', correct: false }
+      - { value: 'They only communicate via NAT', correct: false }
+    help: https://docs.docker.com/network/drivers/ipvlan/
+
+  - uuid: 5f7a2e9c-8d1b-4e3a-6f9c-3a7d5e8b2f1c
+    question: What is a key difference between macvlan and ipvlan L2 mode?
+    answers:
+      - { value: 'macvlan assigns unique MAC addresses, ipvlan shares the parent MAC', correct: true }
+      - { value: 'ipvlan is slower than macvlan', correct: false }
+      - { value: 'macvlan works only on Linux, ipvlan on all platforms', correct: false }
+      - { value: 'There is no difference', correct: false }
+    help: https://docs.docker.com/network/drivers/ipvlan/
+
+  - uuid: 8d3f1a9e-7c2b-5e4a-9f6c-2d8a4e7b1f3c
+    question: In ipvlan L3 mode, what routing functionality is provided?
+    answers:
+      - { value: 'No routing, containers are isolated', correct: false }
+      - { value: 'Docker acts as a router between subnets', correct: true }
+      - { value: 'All traffic is routed through the host gateway', correct: false }
+      - { value: 'Routing is only available in Swarm mode', correct: false }
+    help: https://docs.docker.com/network/drivers/ipvlan/
+
+  - uuid: 2e9a7f4c-8d1b-5e3a-6f9c-4d7a2e8b3f1c
+    question: What is a requirement for using ipvlan?
+    answers:
+      - { value: 'The host kernel must support ipvlan module', correct: true }
+      - { value: 'Docker must be in Swarm mode', correct: false }
+      - { value: 'Containers must run as root', correct: false }
+      - { value: 'Only works with Ubuntu', correct: false }
+    help: https://docs.docker.com/network/drivers/ipvlan/
+
+  - uuid: 6f4a9e2c-7d1b-8e3a-5f9c-3d7a1e8b4f2c
+    question: When would you choose ipvlan over macvlan?
+    answers:
+      - { value: 'When the network switch restricts MAC addresses', correct: true }
+      - { value: 'When you need encrypted communication', correct: false }
+      - { value: 'When running on Windows', correct: false }
+      - { value: 'When containers need NAT', correct: false }
+    help: https://docs.docker.com/network/drivers/ipvlan/
+
+  - uuid: 9c2e7f5a-8d1b-4e3a-6f9c-2d8a5e7b3f1c
+    question: Can ipvlan be used with Docker Swarm mode services?
+    answers:
+      - { value: 'Yes, with some limitations', correct: true }
+      - { value: 'No, ipvlan only works with standalone containers', correct: false }
+      - { value: 'Only in L2 mode', correct: false }
+      - { value: 'Only on overlay networks', correct: false }
+    help: https://docs.docker.com/network/drivers/ipvlan/
+
+  - uuid: 3e8a4f7c-9d2b-5e1a-8f6c-4d9a2e7b5f3c
+    question: What is the advantage of ipvlan L3 mode?
+    answers:
+      - { value: 'Better security through MAC address hiding', correct: false }
+      - { value: 'Simplified routing between container subnets', correct: true }
+      - { value: 'Automatic load balancing', correct: false }
+      - { value: 'Built-in encryption', correct: false }
+    help: https://docs.docker.com/network/drivers/ipvlan/
+
+  - uuid: 7d1f4a9e-8c2b-5e3a-9f6c-3d7a2e8b4f1c
+    question: Which command creates an ipvlan network in L2 mode?
+    answers:
+      - { value: 'docker network create -d ipvlan --subnet=192.168.1.0/24 -o parent=eth0 mynet', correct: true }
+      - { value: 'docker network create --type ipvlan mynet', correct: false }
+      - { value: 'docker create ipvlan --mode=L2 mynet', correct: false }
+      - { value: 'docker network init ipvlan mynet', correct: false }
+    help: https://docs.docker.com/network/drivers/ipvlan/

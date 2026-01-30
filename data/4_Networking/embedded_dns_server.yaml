@@ -1,0 +1,90 @@
+questions:
+  - uuid: 3e8f9a42-5c7d-4b1e-8a9f-2d4c6e8f1a3b
+    question: What IP address does Docker's embedded DNS server listen on within a container?
+    answers:
+      - { value: '172.17.0.1', correct: false }
+      - { value: '127.0.0.1', correct: false }
+      - { value: '127.0.0.11', correct: true }
+      - { value: '8.8.8.8', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: 7b2e4f6a-9d1c-4e3b-a5f7-8c9d0e1f2a4b
+    question: Which networks support automatic container name resolution via Docker's embedded DNS?
+    answers:
+      - { value: 'Only overlay networks', correct: false }
+      - { value: 'User-defined networks', correct: true }
+      - { value: 'The default bridge network', correct: false }
+      - { value: 'Host network only', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: 2c5f8e1a-4b6d-9c3e-7f8a-1d2e3f4a5b6c
+    question: How do containers on user-defined networks resolve each other's IP addresses?
+    answers:
+      - { value: 'By querying an external DNS server', correct: false }
+      - { value: 'Using /etc/hosts file only', correct: false }
+      - { value: 'Through Docker's embedded DNS server', correct: true }
+      - { value: 'Via the host's DNS resolver', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: 9f3a7e2d-5c8b-4f1a-6e9d-3a7b8c9d0e1f
+    question: What happens when a container on a user-defined network queries for another container's name?
+    answers:
+      - { value: 'The query fails and returns an error', correct: false }
+      - { value: "The query is forwarded to the host's DNS", correct: false }
+      - { value: 'Docker's embedded DNS resolves it to the container's IP address', correct: true }
+      - { value: 'The container name is resolved via a DNS proxy on port 53', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: 4e7b9c2d-8f3a-5e1b-9d6c-2f4a7e8b9c1d
+    question: Why does the default bridge network not support automatic DNS resolution between containers?
+    answers:
+      - { value: 'Because it uses legacy linking mechanism', correct: true }
+      - { value: 'Because Docker disables DNS on default networks', correct: false }
+      - { value: 'Because containers on default bridge cannot communicate', correct: false }
+      - { value: 'Because the default bridge requires external DNS', correct: false }
+    help: https://docs.docker.com/network/bridge/#differences-between-user-defined-bridges-and-the-default-bridge
+
+  - uuid: 8d1c5f3e-7a2b-4e9c-6f8d-1a3e5b7c9d2f
+    question: Can containers on user-defined networks resolve external domain names?
+    answers:
+      - { value: 'No, they can only resolve container names', correct: false }
+      - { value: 'Yes, Docker forwards external queries to configured DNS servers', correct: true }
+      - { value: 'Only if running in privileged mode', correct: false }
+      - { value: 'Only on overlay networks', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: 5f9a3e7b-2d1c-8e4f-6a9d-3b7c8e1f2a4d
+    question: Which file inside a container contains DNS server configuration for the embedded DNS?
+    answers:
+      - { value: '/etc/hosts', correct: false }
+      - { value: '/etc/hostname', correct: false }
+      - { value: '/etc/resolv.conf', correct: true }
+      - { value: '/etc/dns.conf', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: 1a8e4f7c-9d2b-5e3a-6f8d-2c4a7e9b1d3f
+    question: How can you customize the DNS servers used by containers?
+    answers:
+      - { value: 'Edit /etc/resolv.conf on the host', correct: false }
+      - { value: 'Use the --dns flag when running a container', correct: true }
+      - { value: 'Configure it in the Dockerfile', correct: false }
+      - { value: 'DNS servers cannot be customized', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: 6e2b9f4a-3d7c-8e1f-5a9d-4b6c8e2f1a3d
+    question: What is the purpose of the 127.0.0.11 DNS resolver in Docker containers?
+    answers:
+      - { value: 'To act as a loopback interface for the container', correct: false }
+      - { value: 'To provide DNS resolution for container names and external domains', correct: true }
+      - { value: 'To handle HTTP traffic between containers', correct: false }
+      - { value: 'To configure network routes', correct: false }
+    help: https://docs.docker.com/config/containers/container-networking/#dns-services
+
+  - uuid: 7c4f1a9e-8d3b-2e5c-9f6a-1d4e8b7c2f3a
+    question: Can you disable Docker's embedded DNS server for a container?
+    answers:
+      - { value: 'No, it is always enabled', correct: false }
+      - { value: 'Yes, by using the host network mode', correct: true }
+      - { value: 'Yes, by using --dns=0.0.0.0', correct: false }
+      - { value: 'Yes, but only on Windows containers', correct: false }
+    help: https://docs.docker.com/network/drivers/host/

@@ -1,0 +1,108 @@
+questions:
+  - uuid: 8f7a9e3c-2d1b-5e4a-6f9c-3d7a2e8b4f1c
+    question: What is a tmpfs mount in Docker?
+    answers:
+      - { value: 'A persistent volume stored on disk', correct: false }
+      - { value: 'A temporary file system stored in memory', correct: true }
+      - { value: 'A network-based storage system', correct: false }
+      - { value: 'A compressed volume', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 2e4a8f9c-7d1b-5e3a-9f6c-4d7a3e8b2f1c
+    question: What happens to data in a tmpfs mount when a container stops?
+    answers:
+      - { value: 'Data is persisted to disk', correct: false }
+      - { value: 'Data is lost', correct: true }
+      - { value: 'Data is backed up automatically', correct: false }
+      - { value: 'Data is moved to a volume', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 5c9a8e4f-7d2b-1e3a-6f9c-3d8a5e7b2f4c
+    question: How do you create a tmpfs mount when running a container?
+    answers:
+      - { value: 'docker run --tmpfs /app ...', correct: true }
+      - { value: 'docker run --temp /app ...', correct: false }
+      - { value: 'docker run --memory-mount /app ...', correct: false }
+      - { value: 'docker run --ram /app ...', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 1d7a4f9e-8c2b-5e3a-9f6c-2d8a4e7b3f1c
+    question: What is a common use case for tmpfs mounts?
+    answers:
+      - { value: 'Storing persistent database files', correct: false }
+      - { value: 'Storing sensitive information that should not persist', correct: true }
+      - { value: 'Sharing data between containers', correct: false }
+      - { value: 'Backing up container data', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 6f3a2e9c-7d1b-4e8a-5f9c-3d7a2e8b1f4c
+    question: Can tmpfs mounts be shared between containers?
+    answers:
+      - { value: 'Yes, like regular volumes', correct: false }
+      - { value: 'No, tmpfs mounts are isolated to a single container', correct: true }
+      - { value: 'Only on Linux', correct: false }
+      - { value: 'Only in Swarm mode', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 9e8a7f4c-8d1b-5e3a-6f9c-4d7a3e8b2f1c
+    question: What is the performance advantage of tmpfs mounts?
+    answers:
+      - { value: 'They are slower than disk', correct: false }
+      - { value: 'They use memory, which is faster than disk I/O', correct: true }
+      - { value: 'They compress data automatically', correct: false }
+      - { value: 'They use SSD storage', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 3c4a9e8f-7d2b-5e1a-9f6c-2d8a5e7b3f4c
+    question: How do you limit the size of a tmpfs mount?
+    answers:
+      - { value: 'Size cannot be limited', correct: false }
+      - { value: 'docker run --tmpfs /app:size=100m ...', correct: true }
+      - { value: 'docker run --tmpfs-size 100m /app ...', correct: false }
+      - { value: 'Edit /etc/docker/daemon.json', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 7d4a2f9e-8c1b-4e3a-6f9c-3d7a2e8b5f1c
+    question: On which platforms are tmpfs mounts available?
+    answers:
+      - { value: 'Linux only', correct: true }
+      - { value: 'Linux and Windows', correct: false }
+      - { value: 'All platforms', correct: false }
+      - { value: 'MacOS only', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 4e2a7f9c-8d1b-5e3a-9f6c-3d7a4e8b2f1c
+    question: What is the alternative syntax for creating tmpfs mounts using --mount?
+    answers:
+      - { value: '--mount type=tmpfs,destination=/app', correct: true }
+      - { value: '--mount tmpfs=/app', correct: false }
+      - { value: '--mount volume=tmpfs,target=/app', correct: false }
+      - { value: '--mount temp=/app', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 8c2a1f9e-7d3b-5e4a-6f9c-2d8a5e7b3f1c
+    question: Which option controls the mode (permissions) of a tmpfs mount?
+    answers:
+      - { value: '--tmpfs /app:mode=1777', correct: true }
+      - { value: '--tmpfs /app:chmod=1777', correct: false }
+      - { value: '--tmpfs /app:permissions=1777', correct: false }
+      - { value: 'Permissions cannot be set', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 5f8a9e3c-7d2b-4e1a-6f9c-3d7a5e8b2f4c
+    question: When should you use tmpfs instead of volumes?
+    answers:
+      - { value: 'For all data storage', correct: false }
+      - { value: 'For temporary, sensitive, or high-performance data that does not need persistence', correct: true }
+      - { value: 'For sharing data across hosts', correct: false }
+      - { value: 'For database storage', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
+
+  - uuid: 9d3a7f2e-8c1b-5e4a-6f9c-2d8a4e7b3f1c
+    question: Does tmpfs count against the container's memory limit?
+    answers:
+      - { value: 'No, tmpfs is unlimited', correct: false }
+      - { value: 'Yes, tmpfs usage counts toward the container's memory limit', correct: true }
+      - { value: 'Only on Windows', correct: false }
+      - { value: 'Only if --memory flag is set', correct: false }
+    help: https://docs.docker.com/storage/tmpfs/
