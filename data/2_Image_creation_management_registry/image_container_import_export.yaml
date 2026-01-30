@@ -1,0 +1,135 @@
+questions:
+  - uuid: 630c3ed3-daad-4aa8-9002-230beafa178e
+    question: What does the `docker commit` command do?
+    answers:
+      - { value: 'Saves changes from a container into a new image', correct: true }
+      - { value: 'Commits changes to the original image', correct: false }
+      - { value: 'Pushes an image to a registry', correct: false }
+      - { value: 'Saves container state to disk', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/commit/
+
+  - uuid: da9f832f-d903-44ee-86b0-0b63a181022b
+    question: Why is using `docker commit` generally discouraged for production images?
+    answers:
+      - { value: 'It creates large, non-reproducible images without clear history', correct: true }
+      - { value: 'It is slower than using Dockerfiles', correct: false }
+      - { value: 'It does not support multi-stage builds', correct: false }
+      - { value: 'It requires root privileges', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/commit/
+
+  - uuid: db7273a3-b517-41c6-abf0-f7a80a77ba6a
+    question: What flag in `docker commit` allows you to pause the container during commit?
+    answers:
+      - { value: '--pause (enabled by default)', correct: true }
+      - { value: '--freeze', correct: false }
+      - { value: '--suspend', correct: false }
+      - { value: '--stop', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/commit/
+
+  - uuid: 1146d256-c636-4197-8798-5f77abca8015
+    question: How do you add a commit message when creating an image with `docker commit`?
+    answers:
+      - { value: 'docker commit --message "message" <container> <image>', correct: true }
+      - { value: 'docker commit --comment "message" <container> <image>', correct: false }
+      - { value: 'docker commit --msg "message" <container> <image>', correct: false }
+      - { value: 'docker commit --description "message" <container> <image>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/commit/
+
+  - uuid: a961b15c-73a0-47e3-bbe9-5c0c2e396a7e
+    question: What is the proper syntax for `docker commit`?
+    answers:
+      - { value: 'docker commit <container> <repository:tag>', correct: true }
+      - { value: 'docker commit <image> <container>', correct: false }
+      - { value: 'docker commit --to <image> <container>', correct: false }
+      - { value: 'docker commit <container> --name <image>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/commit/
+
+  - uuid: 07fb1403-085c-415f-8c52-fc337abe7da3
+    question: What does `docker save` do?
+    answers:
+      - { value: 'Saves one or more images to a tar archive', correct: true }
+      - { value: 'Saves a container to disk', correct: false }
+      - { value: 'Backs up Docker volumes', correct: false }
+      - { value: 'Saves Docker daemon configuration', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/save/
+
+  - uuid: a4b9bc4c-f0fa-4f2d-983f-498cf3acccd5
+    question: How do you save an image to a tar file?
+    answers:
+      - { value: 'docker save -o myimage.tar myimage:tag', correct: true }
+      - { value: 'docker export -o myimage.tar myimage:tag', correct: false }
+      - { value: 'docker backup myimage:tag > myimage.tar', correct: false }
+      - { value: 'docker image save myimage:tag --output myimage.tar', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/save/
+
+  - uuid: 13f6de12-54b0-46d1-8752-1d11f2daf923
+    question: What command loads an image from a tar archive?
+    answers:
+      - { value: 'docker load -i myimage.tar', correct: true }
+      - { value: 'docker import myimage.tar', correct: false }
+      - { value: 'docker restore myimage.tar', correct: false }
+      - { value: 'docker image load myimage.tar', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/load/
+
+  - uuid: ede29242-b9b1-4680-a9f6-931bf0ed40a4
+    question: What is the difference between `docker save` and `docker export`?
+    answers:
+      - { value: 'docker save preserves layers and history; docker export creates a flat filesystem', correct: true }
+      - { value: 'docker save is for containers; docker export is for images', correct: false }
+      - { value: 'docker save creates compressed files; docker export does not', correct: false }
+      - { value: 'There is no difference', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/save/
+
+  - uuid: d37ce003-ae24-4fa4-a171-65a58f240523
+    question: What does `docker export` do?
+    answers:
+      - { value: 'Exports a container filesystem as a tar archive', correct: true }
+      - { value: 'Exports an image with all layers', correct: false }
+      - { value: 'Exports Docker configuration', correct: false }
+      - { value: 'Exports volumes to a backup', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/export/
+
+  - uuid: 8de77d05-6308-4af7-bec4-4a80ef25f9f3
+    question: How do you export a container filesystem to a tar file?
+    answers:
+      - { value: 'docker export <container> -o filesystem.tar', correct: true }
+      - { value: 'docker save <container> > filesystem.tar', correct: false }
+      - { value: 'docker backup <container> --output filesystem.tar', correct: false }
+      - { value: 'docker container save <container> filesystem.tar', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/export/
+
+  - uuid: bf178f06-1f03-4be1-a235-9d1635b99bf5
+    question: What command creates an image from a tar archive created by `docker export`?
+    answers:
+      - { value: 'docker import filesystem.tar newimage:tag', correct: true }
+      - { value: 'docker load filesystem.tar', correct: false }
+      - { value: 'docker create --from filesystem.tar', correct: false }
+      - { value: 'docker build -f filesystem.tar', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/import/
+
+  - uuid: 4c74723b-ed81-4e2b-bdc5-764b367dd5e1
+    question: Does `docker export` preserve image layers?
+    answers:
+      - { value: 'No, it flattens the filesystem into a single layer', correct: true }
+      - { value: 'Yes, it preserves all layers', correct: false }
+      - { value: 'Only if used with --preserve-layers flag', correct: false }
+      - { value: 'It depends on the storage driver', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/export/
+
+  - uuid: a8718d29-31d0-43ce-a955-82f906f55ff4
+    question: Can you save multiple images in a single tar file with `docker save`?
+    answers:
+      - { value: 'Yes, by specifying multiple image names', correct: true }
+      - { value: 'No, only one image per tar file', correct: false }
+      - { value: 'Only with --multiple flag', correct: false }
+      - { value: 'Only if images share the same repository', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/save/
+
+  - uuid: 78aebf92-6eb8-4756-ad29-d1dd21cc6c47
+    question: When would you use `docker save/load` instead of a registry?
+    answers:
+      - { value: 'For offline image transfer or air-gapped environments', correct: true }
+      - { value: 'For faster image distribution', correct: false }
+      - { value: 'To reduce image size', correct: false }
+      - { value: 'To enable image versioning', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/image/save/

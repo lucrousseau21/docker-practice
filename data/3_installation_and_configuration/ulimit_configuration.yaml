@@ -1,0 +1,135 @@
+questions:
+  - uuid: 478011db-c280-49f5-8223-2dd63fda11c1
+    question: What is ulimit used for in Docker containers?
+    answers:
+      - { value: 'To set resource limits on processes within a container', correct: true }
+      - { value: 'To limit the number of containers running', correct: false }
+      - { value: 'To limit network bandwidth', correct: false }
+      - { value: 'To limit the Docker daemon resources', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: 33758bc2-366d-4965-8452-ead18417c4fe
+    question: How do you set ulimit for a container at runtime?
+    answers:
+      - { value: 'docker run --ulimit <type>=<soft>:<hard> <image>', correct: true }
+      - { value: 'docker run --limit <type>=<soft>:<hard> <image>', correct: false }
+      - { value: 'docker run --resource-limit <type>=<value> <image>', correct: false }
+      - { value: 'docker run --set-ulimit <type> <value> <image>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: 334d9d31-bb8c-4c6f-a707-4911f449d3c3
+    question: What does the soft limit in ulimit represent?
+    answers:
+      - { value: 'The default limit that can be increased up to the hard limit', correct: true }
+      - { value: 'A warning threshold that logs when exceeded', correct: false }
+      - { value: 'A limit that is enforced loosely', correct: false }
+      - { value: 'The minimum guaranteed resources', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: e00897b3-45bd-45a7-b677-9cd3afa86286
+    question: What does the hard limit in ulimit represent?
+    answers:
+      - { value: 'The maximum limit that cannot be exceeded', correct: true }
+      - { value: 'A limit enforced strictly at all times', correct: false }
+      - { value: 'The limit set by the system administrator', correct: false }
+      - { value: 'The default limit if soft limit is not specified', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: 9504fe27-ed5e-4a76-9a3c-a83a042ecbb6
+    question: How do you set the maximum number of open files for a container?
+    answers:
+      - { value: 'docker run --ulimit nofile=1024:2048 <image>', correct: true }
+      - { value: 'docker run --ulimit files=1024:2048 <image>', correct: false }
+      - { value: 'docker run --max-files 1024 <image>', correct: false }
+      - { value: 'docker run --file-limit 1024 <image>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: 0a09ade6-f985-415e-a012-6fda80f3e856
+    question: What ulimit type controls the maximum number of processes?
+    answers:
+      - { value: 'nproc', correct: true }
+      - { value: 'maxproc', correct: false }
+      - { value: 'proc', correct: false }
+      - { value: 'processes', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: 4b972fd2-b3fa-4e65-b65c-e556827f1a9e
+    question: How do you set default ulimits for all containers in the Docker daemon?
+    answers:
+      - { value: 'Add "default-ulimits" to /etc/docker/daemon.json', correct: true }
+      - { value: 'Set DOCKER_DEFAULT_ULIMIT environment variable', correct: false }
+      - { value: 'Use docker config set-defaults --ulimit', correct: false }
+      - { value: 'Edit /etc/default/docker with ULIMIT settings', correct: false }
+    help: https://docs.docker.com/reference/cli/dockerd/
+
+  - uuid: c43d088a-2aa8-44bf-80b6-3003e52901fc
+    question: Can a container's ulimit exceed the host's ulimit?
+    answers:
+      - { value: 'No, container ulimits cannot exceed host limits', correct: true }
+      - { value: 'Yes, if running in privileged mode', correct: false }
+      - { value: 'Yes, Docker allows containers to override host limits', correct: false }
+      - { value: 'Only for certain ulimit types', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: 6c3c699b-8bc2-4676-af51-18e3d94b5c68
+    question: What does `--ulimit nofile=1024` mean (single value)?
+    answers:
+      - { value: 'Sets both soft and hard limits to 1024', correct: true }
+      - { value: 'Sets only the soft limit to 1024', correct: false }
+      - { value: 'Sets only the hard limit to 1024', correct: false }
+      - { value: 'Invalid syntax, must specify both values', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: 8ebd0729-133c-410f-b525-dfcb7589c552
+    question: Which ulimit type limits the maximum size of core dumps?
+    answers:
+      - { value: 'core', correct: true }
+      - { value: 'coredump', correct: false }
+      - { value: 'maxcore', correct: false }
+      - { value: 'dumpsize', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: 7f90ab8f-8678-45b2-8a8e-f1a4d83b0fc6
+    question: How do you view the current ulimits of a running container?
+    answers:
+      - { value: 'docker exec <container> sh -c "ulimit -a"', correct: true }
+      - { value: 'docker ulimit <container>', correct: false }
+      - { value: 'docker inspect --ulimits <container>', correct: false }
+      - { value: 'docker container limits <container>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: b25c6927-28cf-4b9f-9624-44984657344d
+    question: Can ulimits be set in a Dockerfile?
+    answers:
+      - { value: 'No, ulimits must be set at container runtime', correct: true }
+      - { value: 'Yes, using the ULIMIT instruction', correct: false }
+      - { value: 'Yes, using the LIMIT instruction', correct: false }
+      - { value: 'Only for certain ulimit types', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: 1da2a08e-af01-4134-9e02-d98144e0af2d
+    question: What ulimit type controls the maximum CPU time in seconds?
+    answers:
+      - { value: 'cpu', correct: true }
+      - { value: 'cputime', correct: false }
+      - { value: 'maxcpu', correct: false }
+      - { value: 'time', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: f9b782d3-f49b-4f6b-8ca2-a79d0e3bfea6
+    question: How do you set unlimited value for a ulimit?
+    answers:
+      - { value: 'Use -1 or "unlimited" as the value', correct: true }
+      - { value: 'Use 0 as the value', correct: false }
+      - { value: 'Use "max" as the value', correct: false }
+      - { value: 'Omit the ulimit flag', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: 3676cabf-06fa-4400-b53f-ec4712830439
+    question: What is the relationship between ulimit and --pids-limit?
+    answers:
+      - { value: 'Both limit process count; --pids-limit is container-specific, ulimit nproc is per-user', correct: true }
+      - { value: 'They are exactly the same', correct: false }
+      - { value: 'ulimit is deprecated in favor of --pids-limit', correct: false }
+      - { value: '--pids-limit sets the ulimit nproc value', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/

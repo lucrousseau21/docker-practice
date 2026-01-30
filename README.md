@@ -30,7 +30,8 @@ The goal is to help candidates:
 * [Interpret the output of “docker inspect” commands.](data/1_Orchestration/interpret_output_docker_inspect_commend.yaml)
 * [Convert an application deployment into a stack file using a YAML compose file with "docker stack deploy"](data/1_Orchestration/convert_to_stack_file.yaml)
 * [Manipulate a running stack of services.](data/1_Orchestration/manipulate_stacks.yaml)
-* [Describe and demonstrate orchestration activities.](data/1_Orchestration/)
+* [Describe and demonstrate orchestration activities.](data/1_Orchestration/orchestration_activities.yaml)
+* [Describe and demonstrate how to use Docker configs in Swarm.](data/1_Orchestration/docker_swarm_configs.yaml)
 * [Increase the number of replicas.](data/1_Orchestration/increase_the_number_of_replicas.yaml)
 * [Add networks, publish ports.](data/1_Orchestration/add_networks_publish_ports.yaml)
 * [Mount volumes.](data/1_Orchestration/mount_volumes.yaml)
@@ -61,6 +62,11 @@ The goal is to help candidates:
 * [Push an image to a registry.](data/2_Image_creation_management_registry/push_an_image_to_a_registry.yaml)
 * [Sign an image in a registry.](data/2_Image_creation_management_registry/sign_an_image_in_a_registry.yaml)
 * [Pull and delete images from a registry.](data/2_Image_creation_management_registry/pull_delete_images_registry.yaml)
+* [Describe and demonstrate container lifecycle management (start, stop, restart, pause, unpause, rm).](data/2_Image_creation_management_registry/container_lifecycle_management.yaml)
+* [Describe and demonstrate image and container import/export (save, load, export, import, commit).](data/2_Image_creation_management_registry/image_container_import_export.yaml)
+* [Describe and demonstrate docker cp and docker update commands.](data/2_Image_creation_management_registry/docker_cp_update_commands.yaml)
+* [Describe and demonstrate health checks in Dockerfile and containers.](data/2_Image_creation_management_registry/docker_healthcheck.yaml)
+* [Describe and demonstrate docker diff to inspect container filesystem changes.](data/2_Image_creation_management_registry/docker_diff_command.yaml)
 
 ### Domain 3: Installation and Configuration (15% of exam)
 
@@ -75,6 +81,11 @@ The goal is to help candidates:
 * [Describe and interpret errors to troubleshoot installation issues without assistance.](data/3_installation_and_configuration/install_troubleshooting.yaml)
 * [Describe and demonstrate the steps to deploy the Docker engine, UCP, and DTR on AWS and on-premises in an HA configuration.](data/3_installation_and_configuration/deploy_ucp_dtr_ha.yaml)
 * [Describe and demonstrate how to configure backups for UCP and DTR.](data/3_installation_and_configuration/backup_ucp_dtr.yaml)
+* [Describe and demonstrate container monitoring with docker stats and docker top.](data/3_installation_and_configuration/container_monitoring_stats.yaml)
+* [Describe and demonstrate resource constraints and limits (memory, CPU, I/O).](data/3_installation_and_configuration/resource_constraints_limits.yaml)
+* [Describe and demonstrate ulimit configuration for containers.](data/3_installation_and_configuration/ulimit_configuration.yaml)
+* [Describe and demonstrate Docker context for managing multiple environments.](data/3_installation_and_configuration/docker_context.yaml)
+* [Describe and demonstrate Docker plugins (volume, network, authorization).](data/3_installation_and_configuration/docker_plugins.yaml)
 
 ### Domain 4: Networking (15% of exam)
 

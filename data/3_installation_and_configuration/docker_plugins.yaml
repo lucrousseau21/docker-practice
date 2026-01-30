@@ -1,0 +1,144 @@
+questions:
+  - uuid: 43b3851b-8978-45da-92ad-f592146c681f
+    question: What are Docker plugins used for?
+    answers:
+      - { value: 'To extend Docker functionality with additional drivers and services', correct: true }
+      - { value: 'To add commands to the Docker CLI', correct: false }
+      - { value: 'To enhance container security only', correct: false }
+      - { value: 'To manage Docker daemon configuration', correct: false }
+    help: https://docs.docker.com/engine/extend/
+
+  - uuid: 12b6099c-c506-44ce-8370-fa084a141bf0
+    question: What types of plugins does Docker support?
+    answers:
+      - { value: 'Volume, network, authorization, logging, and IPAM plugins', correct: true }
+      - { value: 'Only volume and network plugins', correct: false }
+      - { value: 'Storage, compute, and security plugins', correct: false }
+      - { value: 'CLI, daemon, and runtime plugins', correct: false }
+    help: https://docs.docker.com/engine/extend/
+
+  - uuid: 288378eb-3baa-4fd6-bf27-d9dd88527282
+    question: How do you install a Docker plugin?
+    answers:
+      - { value: 'docker plugin install <plugin-name>', correct: true }
+      - { value: 'docker install plugin <plugin-name>', correct: false }
+      - { value: 'docker add plugin <plugin-name>', correct: false }
+      - { value: 'docker plugin add <plugin-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/plugin/install/
+
+  - uuid: b40fc2d8-938d-4941-b1a9-d2d9830218a4
+    question: How do you list all installed Docker plugins?
+    answers:
+      - { value: 'docker plugin ls', correct: true }
+      - { value: 'docker plugins', correct: false }
+      - { value: 'docker plugin list', correct: false }
+      - { value: 'docker list plugins', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/plugin/ls/
+
+  - uuid: 2acc05b7-eb2c-4593-ad84-a05c1b25451b
+    question: What is the state of a plugin after installation but before enabling?
+    answers:
+      - { value: 'Disabled', correct: true }
+      - { value: 'Installed', correct: false }
+      - { value: 'Inactive', correct: false }
+      - { value: 'Pending', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/plugin/install/
+
+  - uuid: 90ece04d-8a87-4e9e-880e-4e206313b040
+    question: How do you enable a Docker plugin?
+    answers:
+      - { value: 'docker plugin enable <plugin-name>', correct: true }
+      - { value: 'docker plugin start <plugin-name>', correct: false }
+      - { value: 'docker enable plugin <plugin-name>', correct: false }
+      - { value: 'docker plugin activate <plugin-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/plugin/enable/
+
+  - uuid: 85b356b6-8798-4d67-9bf2-c10de406bec1
+    question: How do you disable a Docker plugin?
+    answers:
+      - { value: 'docker plugin disable <plugin-name>', correct: true }
+      - { value: 'docker plugin stop <plugin-name>', correct: false }
+      - { value: 'docker disable plugin <plugin-name>', correct: false }
+      - { value: 'docker plugin deactivate <plugin-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/plugin/disable/
+
+  - uuid: 1f8e5c35-8cb0-4389-b993-d917ba2e2bd0
+    question: Can you remove an enabled plugin?
+    answers:
+      - { value: 'No, you must disable it first', correct: true }
+      - { value: 'Yes, using the --force flag', correct: false }
+      - { value: 'Yes, Docker automatically disables it', correct: false }
+      - { value: 'Only if no containers are using it', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/plugin/rm/
+
+  - uuid: 28ff2f2c-1558-4974-93bd-03207a0f578b
+    question: How do you remove a Docker plugin?
+    answers:
+      - { value: 'docker plugin rm <plugin-name>', correct: true }
+      - { value: 'docker plugin delete <plugin-name>', correct: false }
+      - { value: 'docker plugin remove <plugin-name>', correct: false }
+      - { value: 'docker rm plugin <plugin-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/plugin/rm/
+
+  - uuid: fa8d20a1-6c7b-4a54-bb74-89ea7745755e
+    question: How do you inspect details about a plugin?
+    answers:
+      - { value: 'docker plugin inspect <plugin-name>', correct: true }
+      - { value: 'docker inspect plugin <plugin-name>', correct: false }
+      - { value: 'docker plugin show <plugin-name>', correct: false }
+      - { value: 'docker plugin info <plugin-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/plugin/inspect/
+
+  - uuid: 48dd6651-b4f8-4711-8cb4-442ff4a2f625
+    question: What is a volume plugin used for?
+    answers:
+      - { value: 'To provide custom volume drivers for different storage backends', correct: true }
+      - { value: 'To manage volume permissions', correct: false }
+      - { value: 'To compress volume data', correct: false }
+      - { value: 'To encrypt volumes at rest', correct: false }
+    help: https://docs.docker.com/engine/extend/plugins_volume/
+
+  - uuid: 11df5059-b762-4f4a-a67f-690691eb1f51
+    question: What is a network plugin used for?
+    answers:
+      - { value: 'To implement custom network drivers and connectivity solutions', correct: true }
+      - { value: 'To monitor network traffic', correct: false }
+      - { value: 'To configure firewall rules', correct: false }
+      - { value: 'To manage DNS resolution', correct: false }
+    help: https://docs.docker.com/engine/extend/plugins_network/
+
+  - uuid: e84c25d6-2de9-4df5-96b6-78252b2789b3
+    question: What is an authorization plugin used for?
+    answers:
+      - { value: 'To control access to Docker daemon APIs and resources', correct: true }
+      - { value: 'To authenticate users against LDAP', correct: false }
+      - { value: 'To manage container credentials', correct: false }
+      - { value: 'To encrypt Docker API traffic', correct: false }
+    help: https://docs.docker.com/engine/extend/plugins_authorization/
+
+  - uuid: 9d65358a-4371-4a96-b2ed-f3771f39598e
+    question: How do you upgrade a Docker plugin?
+    answers:
+      - { value: 'docker plugin upgrade <plugin-name>', correct: true }
+      - { value: 'docker plugin update <plugin-name>', correct: false }
+      - { value: 'docker update plugin <plugin-name>', correct: false }
+      - { value: 'Uninstall and reinstall the plugin', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/plugin/upgrade/
+
+  - uuid: 55f93ca0-4972-4bcf-9982-6b5c462dbae9
+    question: Can you create your own custom Docker plugin?
+    answers:
+      - { value: 'Yes, using the Docker Plugin API', correct: true }
+      - { value: 'No, only Docker Inc. can create plugins', correct: false }
+      - { value: 'Only with Docker Enterprise', correct: false }
+      - { value: 'Only for volume and network types', correct: false }
+    help: https://docs.docker.com/engine/extend/
+
+  - uuid: 01219e91-a0ec-4b23-80c5-43ff14e21b37
+    question: How do you set options when installing a plugin?
+    answers:
+      - { value: 'docker plugin install <plugin> --grant-all-permissions KEY=VALUE', correct: true }
+      - { value: 'docker plugin install <plugin> --options KEY=VALUE', correct: false }
+      - { value: 'docker plugin install <plugin> --set KEY=VALUE', correct: false }
+      - { value: 'Options can only be set after installation', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/plugin/install/

@@ -1,0 +1,135 @@
+questions:
+  - uuid: 3671ed50-45cb-4f61-b32f-9ad1c623e5c1
+    question: What are the main orchestration activities in Docker Swarm?
+    answers:
+      - { value: 'Scaling services, updating services, rolling back, and managing placement', correct: true }
+      - { value: 'Building images and pushing to registries', correct: false }
+      - { value: 'Configuring networks and volumes only', correct: false }
+      - { value: 'Managing Docker daemon settings', correct: false }
+    help: https://docs.docker.com/engine/swarm/
+
+  - uuid: 3ff952d2-392f-4ea2-9e14-83a99fc1600c
+    question: What command updates a service configuration in Swarm?
+    answers:
+      - { value: 'docker service update', correct: true }
+      - { value: 'docker service modify', correct: false }
+      - { value: 'docker service change', correct: false }
+      - { value: 'docker update service', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/update/
+
+  - uuid: b995c849-a172-4c39-82c8-3b82daf9f734
+    question: How do you perform a rolling update of a service image?
+    answers:
+      - { value: 'docker service update --image <new-image> <service>', correct: true }
+      - { value: 'docker service rollout <service> --image <new-image>', correct: false }
+      - { value: 'docker service deploy --image <new-image> <service>', correct: false }
+      - { value: 'docker service upgrade <service> <new-image>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/update/
+
+  - uuid: ed668a6e-d654-4e7c-b5a3-2e52342af74c
+    question: What flag controls the update delay between task updates?
+    answers:
+      - { value: '--update-delay', correct: true }
+      - { value: '--delay', correct: false }
+      - { value: '--rolling-delay', correct: false }
+      - { value: '--wait-time', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/update/
+
+  - uuid: b1a5e072-6a75-4f5f-90ae-2bf7ead7ceb0
+    question: How do you rollback a service to its previous configuration?
+    answers:
+      - { value: 'docker service rollback <service>', correct: true }
+      - { value: 'docker service update --rollback <service>', correct: false }
+      - { value: 'docker service revert <service>', correct: false }
+      - { value: 'docker rollback service <service>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/rollback/
+
+  - uuid: 6170355c-cfdb-434a-9f44-73b5d63a9175
+    question: What is the default update parallelism for services?
+    answers:
+      - { value: '1 (one task at a time)', correct: true }
+      - { value: '2 tasks at a time', correct: false }
+      - { value: 'All tasks simultaneously', correct: false }
+      - { value: '10% of replicas', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/update/
+
+  - uuid: 0654f903-524f-411f-9a07-1a0f1eaa5291
+    question: How do you set the number of tasks to update simultaneously?
+    answers:
+      - { value: '--update-parallelism <number>', correct: true }
+      - { value: '--parallel <number>', correct: false }
+      - { value: '--concurrent-updates <number>', correct: false }
+      - { value: '--batch-size <number>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/update/
+
+  - uuid: 4855ceb6-e03d-4729-8455-aa7792c2129b
+    question: What happens if an update fails on a task?
+    answers:
+      - { value: 'Behavior depends on --update-failure-action (pause, continue, or rollback)', correct: true }
+      - { value: 'The update always stops immediately', correct: false }
+      - { value: 'The task is automatically rolled back', correct: false }
+      - { value: 'The service is deleted', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/update/
+
+  - uuid: 32b349df-518f-4e4c-890b-50d5085bf7d9
+    question: How do you drain a node to prevent new tasks from being scheduled on it?
+    answers:
+      - { value: 'docker node update --availability drain <node>', correct: true }
+      - { value: 'docker node drain <node>', correct: false }
+      - { value: 'docker node disable <node>', correct: false }
+      - { value: 'docker swarm drain <node>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/node/update/
+
+  - uuid: bb40f27e-d38c-4d17-a8f6-f30a02e7ddaa
+    question: What are the three availability states for a Swarm node?
+    answers:
+      - { value: 'active, pause, drain', correct: true }
+      - { value: 'enabled, disabled, maintenance', correct: false }
+      - { value: 'running, stopped, suspended', correct: false }
+      - { value: 'online, offline, unavailable', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/node/update/
+
+  - uuid: ed5e2152-bf5e-4366-a139-7e6083fe1133
+    question: How do you configure automatic rollback on update failure?
+    answers:
+      - { value: '--update-failure-action rollback', correct: true }
+      - { value: '--auto-rollback', correct: false }
+      - { value: '--rollback-on-failure', correct: false }
+      - { value: '--failure-action auto-rollback', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/update/
+
+  - uuid: b4ef6871-9b21-4534-b08b-39d7f835aeb3
+    question: What command shows the update history of a service?
+    answers:
+      - { value: 'docker service ps <service> shows task history including updates', correct: true }
+      - { value: 'docker service history <service>', correct: false }
+      - { value: 'docker service logs --history <service>', correct: false }
+      - { value: 'docker service inspect --history <service>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/ps/
+
+  - uuid: 8547409f-1e6a-456f-88cd-e4671118cb2c
+    question: How do you force a service to redeploy without changing any configuration?
+    answers:
+      - { value: 'docker service update --force <service>', correct: true }
+      - { value: 'docker service restart <service>', correct: false }
+      - { value: 'docker service redeploy <service>', correct: false }
+      - { value: 'docker service update --refresh <service>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/update/
+
+  - uuid: 0bab18ea-12ca-4358-84b2-c3bfedb13554
+    question: What is the purpose of the --update-monitor flag?
+    answers:
+      - { value: 'Sets duration after task update to monitor for failure', correct: true }
+      - { value: 'Enables real-time monitoring during updates', correct: false }
+      - { value: 'Sets the log verbosity for updates', correct: false }
+      - { value: 'Displays a progress bar during updates', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/update/
+
+  - uuid: c44177a3-0d8b-477e-b0ed-a3f3f9b849a5
+    question: Can you update multiple services at once with a single command?
+    answers:
+      - { value: 'No, each service must be updated separately', correct: true }
+      - { value: 'Yes, by listing multiple service names', correct: false }
+      - { value: 'Yes, using --all flag', correct: false }
+      - { value: 'Only services in the same stack', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/update/

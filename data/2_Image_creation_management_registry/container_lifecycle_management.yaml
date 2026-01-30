@@ -1,0 +1,135 @@
+questions:
+  - uuid: d52406b3-767d-4096-9237-a8a80dbc999d
+    question: Which command starts a stopped container?
+    answers:
+      - { value: 'docker container start <container>', correct: true }
+      - { value: 'docker container run <container>', correct: false }
+      - { value: 'docker container resume <container>', correct: false }
+      - { value: 'docker container unpause <container>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/start/
+
+  - uuid: bb897cfa-45ba-4a7e-8531-217a7d3eac34
+    question: What is the difference between `docker stop` and `docker kill`?
+    answers:
+      - { value: 'docker stop sends SIGTERM then SIGKILL after grace period; docker kill sends SIGKILL immediately', correct: true }
+      - { value: 'docker stop only works on running containers; docker kill works on any container', correct: false }
+      - { value: 'docker stop removes the container; docker kill only stops it', correct: false }
+      - { value: 'There is no difference, they are aliases', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stop/
+
+  - uuid: d471d999-a4a5-41f1-8122-01883abd6ffc
+    question: Which command temporarily suspends all processes in a container?
+    answers:
+      - { value: 'docker container stop', correct: false }
+      - { value: 'docker container pause', correct: true }
+      - { value: 'docker container suspend', correct: false }
+      - { value: 'docker container freeze', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/pause/
+
+  - uuid: 9b11e9dc-3503-49d9-99ac-98966359f692
+    question: What command resumes a paused container?
+    answers:
+      - { value: 'docker container start', correct: false }
+      - { value: 'docker container resume', correct: false }
+      - { value: 'docker container unpause', correct: true }
+      - { value: 'docker container continue', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/unpause/
+
+  - uuid: 8bb4dde3-e8ba-4cc2-b741-669cd71280d3
+    question: Which command restarts a running container?
+    answers:
+      - { value: 'docker container reboot', correct: false }
+      - { value: 'docker container restart', correct: true }
+      - { value: 'docker container reload', correct: false }
+      - { value: 'docker container stop && docker container start', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/restart/
+
+  - uuid: 00a8afa9-fdd6-4cfb-b55e-7dd07b7a819c
+    question: What happens when you restart a container with `docker restart`?
+    answers:
+      - { value: 'The container is recreated from the image', correct: false }
+      - { value: 'All data in the container is lost', correct: false }
+      - { value: 'The container stops and starts again with the same configuration', correct: true }
+      - { value: 'The container starts with a new IP address', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/restart/
+
+  - uuid: 9acd45cb-14c0-4b27-92f7-62aff32b51e6
+    question: How do you gracefully stop a container with a custom timeout?
+    answers:
+      - { value: 'docker stop --timeout 30 <container>', correct: true }
+      - { value: 'docker stop --time 30 <container>', correct: false }
+      - { value: 'docker kill --graceful 30 <container>', correct: false }
+      - { value: 'docker container stop --grace-period 30 <container>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stop/
+
+  - uuid: 264c7ada-812f-437f-a43d-545cb6a28e61
+    question: Which command removes a stopped container?
+    answers:
+      - { value: 'docker container delete', correct: false }
+      - { value: 'docker container remove', correct: false }
+      - { value: 'docker container rm', correct: true }
+      - { value: 'docker container prune', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/rm/
+
+  - uuid: 4c6364db-ad9e-471f-a968-6c1dd0f5a61b
+    question: How do you force remove a running container?
+    answers:
+      - { value: 'docker rm --force <container>', correct: true }
+      - { value: 'docker rm --kill <container>', correct: false }
+      - { value: 'docker rm --running <container>', correct: false }
+      - { value: 'docker kill && docker rm <container>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/rm/
+
+  - uuid: f9a39ebf-c06a-4e62-afe5-f137c5f8ab10
+    question: What flag automatically removes a container when it exits?
+    answers:
+      - { value: '--auto-remove', correct: false }
+      - { value: '--rm', correct: true }
+      - { value: '--delete', correct: false }
+      - { value: '--ephemeral', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: bcfff7da-5af4-4ecd-8fc3-e8dd4dd8fe31
+    question: Which command removes all stopped containers?
+    answers:
+      - { value: 'docker container prune', correct: true }
+      - { value: 'docker container rm --all', correct: false }
+      - { value: 'docker system prune --containers', correct: false }
+      - { value: 'docker container clean', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/prune/
+
+  - uuid: 0668bdaf-c583-43ea-b80a-c0e288e4decd
+    question: What signal does `docker pause` use to freeze a container?
+    answers:
+      - { value: 'SIGSTOP', correct: false }
+      - { value: 'SIGTERM', correct: false }
+      - { value: 'SIGFREEZE', correct: false }
+      - { value: 'It uses cgroup freezer, not a signal', correct: true }
+    help: https://docs.docker.com/reference/cli/docker/container/pause/
+
+  - uuid: 82af97f8-303a-4e5b-8557-e080eb1b4648
+    question: Can you pause a container and then stop it without unpausing first?
+    answers:
+      - { value: 'No, you must unpause before stopping', correct: false }
+      - { value: 'Yes, docker stop will work on paused containers', correct: true }
+      - { value: 'Only if you use docker kill instead', correct: false }
+      - { value: 'Only with the --force flag', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stop/
+
+  - uuid: 1c727569-f88c-4484-bfcc-b916b4f40319
+    question: Which command shows whether a container is running, stopped, or paused?
+    answers:
+      - { value: 'docker container status', correct: false }
+      - { value: 'docker container ls -a', correct: true }
+      - { value: 'docker container state', correct: false }
+      - { value: 'docker ps --status', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/ls/
+
+  - uuid: 14bfd520-b046-44c3-a6ad-16fb79afc03b
+    question: What is the default timeout for `docker stop` before it sends SIGKILL?
+    answers:
+      - { value: '5 seconds', correct: false }
+      - { value: '10 seconds', correct: true }
+      - { value: '30 seconds', correct: false }
+      - { value: '60 seconds', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stop/

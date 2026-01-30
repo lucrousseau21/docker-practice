@@ -1,0 +1,153 @@
+questions:
+  - uuid: f321b30f-a8c1-4e1f-8047-9fce1d2e5288
+    question: What is the purpose of Docker health checks?
+    answers:
+      - { value: 'To monitor container health status and report it to the Docker engine', correct: true }
+      - { value: 'To check if the Docker daemon is running', correct: false }
+      - { value: 'To scan images for vulnerabilities', correct: false }
+      - { value: 'To verify network connectivity', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: afcca0f2-1b13-4615-9090-57f68ad1c660
+    question: How do you define a health check in a Dockerfile?
+    answers:
+      - { value: 'HEALTHCHECK CMD command', correct: true }
+      - { value: 'HEALTH CMD command', correct: false }
+      - { value: 'CHECK CMD command', correct: false }
+      - { value: 'MONITOR CMD command', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: ef8eb29e-9f64-455e-848a-2d87e356699c
+    question: What exit code should a health check command return for a healthy container?
+    answers:
+      - { value: '0', correct: true }
+      - { value: '1', correct: false }
+      - { value: '200', correct: false }
+      - { value: 'Any non-zero value', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: 5680102a-6005-4dcf-9587-e8331fdc714e
+    question: What exit code indicates an unhealthy container?
+    answers:
+      - { value: '1', correct: true }
+      - { value: '0', correct: false }
+      - { value: '-1', correct: false }
+      - { value: '255', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: 40ae2d92-4b26-45cc-b05f-1d5532a9ca60
+    question: How do you set the interval between health checks in a Dockerfile?
+    answers:
+      - { value: 'HEALTHCHECK --interval=30s CMD command', correct: true }
+      - { value: 'HEALTHCHECK --frequency=30s CMD command', correct: false }
+      - { value: 'HEALTHCHECK --period=30s CMD command', correct: false }
+      - { value: 'HEALTHCHECK --every=30s CMD command', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: e498140d-6df3-4547-8cc3-9fca751cab1d
+    question: What is the default interval for health checks?
+    answers:
+      - { value: '30 seconds', correct: true }
+      - { value: '10 seconds', correct: false }
+      - { value: '60 seconds', correct: false }
+      - { value: '5 seconds', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: 7823cc53-e521-4b18-9596-00c8f1f6178e
+    question: How do you set a timeout for a health check command?
+    answers:
+      - { value: 'HEALTHCHECK --timeout=10s CMD command', correct: true }
+      - { value: 'HEALTHCHECK --max-time=10s CMD command', correct: false }
+      - { value: 'HEALTHCHECK --limit=10s CMD command', correct: false }
+      - { value: 'HEALTHCHECK --deadline=10s CMD command', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: 879f80fb-86c0-446c-9881-c6391f13e324
+    question: What is the `--retries` option in a health check?
+    answers:
+      - { value: 'Number of consecutive failures needed before marking unhealthy', correct: true }
+      - { value: 'Number of times to retry the command on error', correct: false }
+      - { value: 'Number of parallel health check attempts', correct: false }
+      - { value: 'Maximum number of health checks per hour', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: b47b5991-21b8-477e-aee2-085aaaab5543
+    question: What is the default number of retries before marking a container unhealthy?
+    answers:
+      - { value: '3', correct: true }
+      - { value: '1', correct: false }
+      - { value: '5', correct: false }
+      - { value: '10', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: 3a44bbfc-a7da-47a7-b421-5aa642ab100b
+    question: How do you disable an inherited health check in a Dockerfile?
+    answers:
+      - { value: 'HEALTHCHECK NONE', correct: true }
+      - { value: 'HEALTHCHECK --disable', correct: false }
+      - { value: 'HEALTHCHECK OFF', correct: false }
+      - { value: 'HEALTHCHECK --remove', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: 15470b7e-e338-45d7-b557-69ac03d99474
+    question: How can you add a health check to a running container without rebuilding the image?
+    answers:
+      - { value: 'Use the --health-cmd flag with docker run or docker container create', correct: true }
+      - { value: 'Use docker container health-add command', correct: false }
+      - { value: 'Health checks can only be defined in Dockerfiles', correct: false }
+      - { value: 'Use docker update --health-cmd', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/run/
+
+  - uuid: ac465c0d-bac5-4b17-9321-f3a52c03ac3c
+    question: What command shows the health status of a container?
+    answers:
+      - { value: 'docker inspect <container> or docker ps', correct: true }
+      - { value: 'docker health <container>', correct: false }
+      - { value: 'docker container health <container>', correct: false }
+      - { value: 'docker status <container>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/inspect/
+
+  - uuid: 9572e7a1-e59d-49da-8749-a89af904919c
+    question: How do you set a start period before health checks begin?
+    answers:
+      - { value: 'HEALTHCHECK --start-period=60s CMD command', correct: true }
+      - { value: 'HEALTHCHECK --delay=60s CMD command', correct: false }
+      - { value: 'HEALTHCHECK --grace-period=60s CMD command', correct: false }
+      - { value: 'HEALTHCHECK --wait=60s CMD command', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: 22206346-0552-4d37-a32f-6d4172d71c8d
+    question: What is the purpose of the start-period in a health check?
+    answers:
+      - { value: 'Gives the container time to initialize before health checks affect its status', correct: true }
+      - { value: 'Delays the first health check only', correct: false }
+      - { value: 'Sets when the container should auto-start', correct: false }
+      - { value: 'Defines the startup timeout', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: 155c68b9-9c8d-4e55-bbfd-ffcc402c1db2
+    question: Can Docker automatically restart a container marked as unhealthy?
+    answers:
+      - { value: 'Not directly; orchestrators like Swarm replace unhealthy service tasks with new containers', correct: true }
+      - { value: 'Yes, by default all unhealthy containers restart', correct: false }
+      - { value: 'Only if --restart=on-unhealthy is set', correct: false }
+      - { value: 'Health checks only monitor, never trigger actions', correct: false }
+    help: https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
+
+  - uuid: 3cccac44-f087-460d-b517-0e5e384681dc
+    question: What shell is used to execute HEALTHCHECK CMD in a Dockerfile?
+    answers:
+      - { value: '/bin/sh -c on Linux, cmd /S /C on Windows', correct: true }
+      - { value: '/bin/bash -c', correct: false }
+      - { value: 'Direct execution without shell', correct: false }
+      - { value: 'The default shell of the container', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
+
+  - uuid: 2c1640c5-0b4f-4241-b215-f6ccbc1f6dd2
+    question: How would you write a health check that uses curl to test an HTTP endpoint?
+    answers:
+      - { value: 'HEALTHCHECK CMD curl -f http://localhost/ || exit 1', correct: true }
+      - { value: 'HEALTHCHECK curl http://localhost/', correct: false }
+      - { value: 'HEALTHCHECK TEST curl http://localhost/', correct: false }
+      - { value: 'HEALTHCHECK --test curl http://localhost/', correct: false }
+    help: https://docs.docker.com/reference/dockerfile/#healthcheck
