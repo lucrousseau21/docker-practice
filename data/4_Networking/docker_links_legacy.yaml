@@ -36,7 +36,7 @@ questions:
     help: https://docs.docker.com/network/links/
 
   - uuid: 6083cc72-adc4-4a9f-94b7-111e90de7dcb
-    question: What is a key limitation of Docker links?
+    question: What is a key communication-related limitation of Docker links?
     answers:
       - { value: 'They do not work in Swarm mode', correct: false }
       - { value: 'They only work in one direction', correct: true }
