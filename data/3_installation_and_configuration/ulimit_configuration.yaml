@@ -128,7 +128,7 @@ questions:
   - uuid: c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f
     question: What is the relationship between ulimit and --pids-limit?
     answers:
-      - { value: '--pids-limit is a newer, more explicit way to limit process count', correct: true }
+      - { value: 'Both limit process count; --pids-limit is container-specific, ulimit nproc is per-user', correct: true }
       - { value: 'They are exactly the same', correct: false }
       - { value: 'ulimit is deprecated in favor of --pids-limit', correct: false }
       - { value: '--pids-limit sets the ulimit nproc value', correct: false }

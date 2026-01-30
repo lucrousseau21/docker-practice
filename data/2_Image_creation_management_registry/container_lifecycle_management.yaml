@@ -11,7 +11,7 @@ questions:
   - uuid: 8e2f4b3a-1c5d-4e7f-9a2b-6d8c3e1f4a5b
     question: What is the difference between `docker stop` and `docker kill`?
     answers:
-      - { value: 'docker stop sends SIGTERM then SIGKILL after timeout; docker kill sends SIGKILL immediately', correct: true }
+      - { value: 'docker stop sends SIGTERM then SIGKILL after grace period; docker kill sends SIGKILL immediately', correct: true }
       - { value: 'docker stop only works on running containers; docker kill works on any container', correct: false }
       - { value: 'docker stop removes the container; docker kill only stops it', correct: false }
       - { value: 'There is no difference, they are aliases', correct: false }

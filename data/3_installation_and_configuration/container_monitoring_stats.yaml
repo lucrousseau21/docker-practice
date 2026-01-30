@@ -47,8 +47,8 @@ questions:
   - uuid: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c
     question: What does the MEM % column in `docker stats` represent?
     answers:
-      - { value: 'Percentage of container memory limit used', correct: false }
-      - { value: 'Percentage of total host memory used by the container', correct: true }
+      - { value: 'Percentage of container memory limit (if set) or total host memory', correct: true }
+      - { value: 'Always percentage of total host memory', correct: false }
       - { value: 'Percentage of swap memory used', correct: false }
       - { value: 'Percentage of cache memory used', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/stats/

@@ -2,7 +2,7 @@ questions:
   - uuid: a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d
     question: What is the purpose of Docker health checks?
     answers:
-      - { value: 'To monitor container health and automatically restart unhealthy containers', correct: true }
+      - { value: 'To monitor container health status and report it to the Docker engine', correct: true }
       - { value: 'To check if the Docker daemon is running', correct: false }
       - { value: 'To scan images for vulnerabilities', correct: false }
       - { value: 'To verify network connectivity', correct: false }
@@ -128,7 +128,7 @@ questions:
   - uuid: c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f
     question: Can Docker automatically restart a container marked as unhealthy?
     answers:
-      - { value: 'Not directly, but orchestrators like Swarm can react to health status', correct: true }
+      - { value: 'Not directly; orchestrators like Swarm replace unhealthy service tasks with new containers', correct: true }
       - { value: 'Yes, by default all unhealthy containers restart', correct: false }
       - { value: 'Only if --restart=on-unhealthy is set', correct: false }
       - { value: 'Health checks only monitor, never trigger actions', correct: false }
