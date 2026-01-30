@@ -102,7 +102,7 @@ questions:
     question: Does tmpfs count against the container's memory limit?
     answers:
       - { value: 'No, tmpfs is unlimited', correct: false }
-      - { value: 'Yes, tmpfs usage counts toward the container's memory limit', correct: true }
+      - { value: "Yes, tmpfs usage counts toward the container's memory limit", correct: true }
       - { value: 'Only on Windows', correct: false }
       - { value: 'Only if --memory flag is set', correct: false }
     help: https://docs.docker.com/storage/tmpfs/

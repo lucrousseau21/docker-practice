@@ -22,8 +22,8 @@ questions:
     answers:
       - { value: 'By querying an external DNS server', correct: false }
       - { value: 'Using /etc/hosts file only', correct: false }
-      - { value: 'Through Docker's embedded DNS server', correct: true }
-      - { value: 'Via the host's DNS resolver', correct: false }
+      - { value: "Through Docker's embedded DNS server", correct: true }
+      - { value: "Via the host's DNS resolver", correct: false }
     help: https://docs.docker.com/config/containers/container-networking/#dns-services
 
   - uuid: 7a0c8324-2281-4b94-bcc3-f46e8516a94f
@@ -31,7 +31,7 @@ questions:
     answers:
       - { value: 'The query fails and returns an error', correct: false }
       - { value: "The query is forwarded to the host's DNS", correct: false }
-      - { value: 'Docker's embedded DNS resolves it to the container's IP address', correct: true }
+      - { value: "Docker's embedded DNS resolves it to the container's IP address", correct: true }
       - { value: 'The container name is resolved via a DNS proxy on port 53', correct: false }
     help: https://docs.docker.com/config/containers/container-networking/#dns-services
 

@@ -20,7 +20,7 @@ questions:
   - uuid: 9d781278-f4fe-4a96-a079-fe2ecc3fbcaa
     question: In ipvlan L2 mode, how do containers appear on the network?
     answers:
-      - { value: 'They share the parent interface's MAC address', correct: true }
+      - { value: "They share the parent interface's MAC address", correct: true }
       - { value: 'They each get a unique MAC address', correct: false }
       - { value: 'They cannot communicate with external networks', correct: false }
       - { value: 'They only communicate via NAT', correct: false }
