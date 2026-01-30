@@ -1,5 +1,5 @@
 questions:
-  - uuid: 9f7a3e2c-8d1b-5e4a-6f9c-3d7a2e8b4f1c
+  - uuid: 2dfed93c-bfd7-476c-94a5-be0839bce311
     question: What does the --internal flag do when creating a Docker network?
     answers:
       - { value: 'Disables all networking', correct: false }
@@ -8,7 +8,7 @@ questions:
       - { value: 'Creates a private subnet', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
-  - uuid: 2e4a8f9c-7d1b-5e3a-9f6c-4d7a3e8b2f1c
+  - uuid: 88c6b405-3d32-4129-9eef-2d03e3964956
     question: Can containers on an internal network communicate with each other?
     answers:
       - { value: 'No, they are completely isolated', correct: false }
@@ -17,7 +17,7 @@ questions:
       - { value: 'Only if using overlay networks', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
-  - uuid: 5c8a9e4f-7d2b-1e3a-6f9c-3d8a5e7b2f4c
+  - uuid: f81c936c-f26e-4e63-ac57-c0266d280ac2
     question: How do you create an internal Docker network?
     answers:
       - { value: 'docker network create --private mynet', correct: false }
@@ -26,7 +26,7 @@ questions:
       - { value: 'docker network create --no-external mynet', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
-  - uuid: 1d7f4a9e-8c2b-5e3a-9f6c-2d8a4e7b3f1c
+  - uuid: 134635ba-f596-4f50-92ac-62adba162824
     question: What is a common use case for internal networks?
     answers:
       - { value: 'To improve network performance', correct: false }
@@ -35,7 +35,7 @@ questions:
       - { value: 'To reduce container startup time', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
-  - uuid: 6f3a2e9c-7d1b-4e8a-5f9c-3d7a2e8b1f4c
+  - uuid: 016a7285-d540-4c84-9469-178017f2f603
     question: Can a container on an internal network access the host's network services?
     answers:
       - { value: 'Yes, always', correct: false }
@@ -44,7 +44,7 @@ questions:
       - { value: 'Only if using --privileged flag', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
-  - uuid: 9e8f7a4c-8d1b-5e3a-6f9c-4d7a3e8b2f1c
+  - uuid: 0d1f44ec-7405-42c5-9bfa-2e57f26ab839
     question: Can you connect a container to both an internal and external network?
     answers:
       - { value: 'No, only one network type is allowed', correct: false }
@@ -53,7 +53,7 @@ questions:
       - { value: 'Only with overlay networks', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_connect/
 
-  - uuid: 3c9e4f8a-7d2b-5e1a-9f6c-2d8a5e7b3f4c
+  - uuid: 0d5767b4-a655-4063-a821-e8ab3252242a
     question: How can you verify if a network is internal?
     answers:
       - { value: 'docker network ls --internal', correct: false }
@@ -62,7 +62,7 @@ questions:
       - { value: 'docker inspect --type=network <network>', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_inspect/
 
-  - uuid: 7d4f2a9e-8c1b-4e3a-6f9c-3d7a2e8b5f1c
+  - uuid: d6f5d944-b321-421d-b2ed-5fc44514aafc
     question: What happens if you try to pull an image from a container on an internal network?
     answers:
       - { value: 'The pull succeeds normally', correct: false }
@@ -71,7 +71,7 @@ questions:
       - { value: 'The operation is queued until network is changed', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
-  - uuid: 4e7a2f9c-8d1b-5e3a-9f6c-3d7a4e8b2f1c
+  - uuid: 418744ce-6e33-4353-b299-54e2487fade8
     question: Can internal networks be used with Docker Swarm services?
     answers:
       - { value: 'No, internal networks only work with standalone containers', correct: false }
@@ -80,7 +80,7 @@ questions:
       - { value: 'Only with replicated services', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
-  - uuid: 8c2f1a9e-7d3b-5e4a-6f9c-2d8a5e7b3f1c
+  - uuid: 03720b71-374c-4d10-b152-a22b8bc1d7e4
     question: Which network driver(s) support the --internal flag?
     answers:
       - { value: 'Only bridge networks', correct: false }

@@ -1,5 +1,5 @@
 questions:
-  - uuid: 9f8a7e3c-2d1b-5e4a-6f9c-3d7a2e8b4f1c
+  - uuid: 5e0dad49-d0e4-4e61-bc4c-bf9fec674e40
     question: What is Docker rootless mode?
     answers:
       - { value: 'Running containers without root user inside', correct: false }
@@ -8,7 +8,7 @@ questions:
       - { value: 'Using SELinux to restrict root access', correct: false }
     help: https://docs.docker.com/engine/security/rootless/
 
-  - uuid: 2e4a8f9c-7d1b-5e3a-9f6c-4d7a3e8b2f1c
+  - uuid: ad78d444-5b3e-4fd8-b15c-63b9f59005d2
     question: What is the primary security benefit of rootless mode?
     answers:
       - { value: 'Faster container startup', correct: false }
@@ -17,7 +17,7 @@ questions:
       - { value: 'Automatic encryption', correct: false }
     help: https://docs.docker.com/engine/security/rootless/
 
-  - uuid: 5c9a8e4f-7d2b-1e3a-6f9c-3d8a5e7b2f4c
+  - uuid: 3235b9dc-051e-47e1-8d80-f9baa340b321
     question: Which Linux kernel features does rootless mode rely on?
     answers:
       - { value: 'SELinux only', correct: false }
@@ -26,7 +26,7 @@ questions:
       - { value: 'cgroups v1', correct: false }
     help: https://docs.docker.com/engine/security/rootless/
 
-  - uuid: 1d7a4f9e-8c2b-5e3a-9f6c-2d8a4e7b3f1c
+  - uuid: 14014301-1845-4398-9029-88bac477a5ee
     question: What is a limitation of Docker rootless mode?
     answers:
       - { value: 'Cannot run any containers', correct: false }
@@ -35,7 +35,7 @@ questions:
       - { value: 'Requires Docker Enterprise', correct: false }
     help: https://docs.docker.com/engine/security/rootless/
 
-  - uuid: 6f3a9e2c-7d1b-4e8a-5f9c-3d7a2e8b1f4c
+  - uuid: 78f911cc-2393-4afb-ab47-adf9381bd345
     question: Can rootless mode bind to privileged ports (below 1024) by default?
     answers:
       - { value: 'Yes, always', correct: false }
@@ -44,7 +44,7 @@ questions:
       - { value: 'Only with sudo', correct: false }
     help: https://docs.docker.com/engine/security/rootless/
 
-  - uuid: 9e8a7f4c-8d1b-5e3a-6f9c-4d7a3e8b2f1c
+  - uuid: f4573e7b-8a41-47b8-8f2e-3f56d175012f
     question: Which command installs Docker in rootless mode?
     answers:
       - { value: 'dockerd-rootless-setuptool.sh install', correct: true }
@@ -53,7 +53,7 @@ questions:
       - { value: 'docker-ce install --user', correct: false }
     help: https://docs.docker.com/engine/security/rootless/
 
-  - uuid: 3c4a9e8f-7d2b-5e1a-9f6c-2d8a5e7b3f4c
+  - uuid: 5c72a4c0-c9f2-49cf-8bd5-b324a63de331
     question: Does rootless mode support overlay networks?
     answers:
       - { value: 'Yes, with full functionality', correct: false }
@@ -62,7 +62,7 @@ questions:
       - { value: 'Only on kernel 5.10+', correct: false }
     help: https://docs.docker.com/engine/security/rootless/
 
-  - uuid: 7d4a2f9e-8c1b-4e3a-6f9c-3d7a2e8b5f1c
+  - uuid: 1427fdc6-8b94-4cbf-acc9-7900aa34309b
     question: Where are rootless Docker data stored by default?
     answers:
       - { value: '/var/lib/docker', correct: false }
@@ -71,7 +71,7 @@ questions:
       - { value: '/etc/docker', correct: false }
     help: https://docs.docker.com/engine/security/rootless/
 
-  - uuid: 4e2a7f9c-8d1b-5e3a-9f6c-3d7a4e8b2f1c
+  - uuid: 19b7ed8d-504b-443d-912a-f995ec2e6728
     question: Can you run both rootless and rootful Docker on the same host?
     answers:
       - { value: 'No, only one installation allowed', correct: false }
@@ -80,7 +80,7 @@ questions:
       - { value: 'Only with virtualization', correct: false }
     help: https://docs.docker.com/engine/security/rootless/
 
-  - uuid: 8c2a1f9e-7d3b-5e4a-6f9c-2d8a5e7b3f1c
+  - uuid: b7594085-0b41-4b8d-a7c4-ed7e638e7611
     question: Which cgroup version is recommended for rootless mode?
     answers:
       - { value: 'cgroup v1', correct: false }

@@ -1,5 +1,5 @@
 questions:
-  - uuid: 7e8a9f3c-2d1b-5e4a-6f9c-3d7a2e8b4f1c
+  - uuid: d8568baf-1f8d-4a48-b092-06c060c4d8e8
     question: What is the main difference between the -v and --mount syntax?
     answers:
       - { value: 'They are completely different commands', correct: false }
@@ -8,7 +8,7 @@ questions:
       - { value: '--mount only works in Swarm', correct: false }
     help: https://docs.docker.com/storage/volumes/
 
-  - uuid: 2e4a8f9c-7d1b-5e3a-9f6c-4d7a3e8b2f1c
+  - uuid: caa310bd-a3af-4ab1-8c23-3d452afc6435
     question: Which flag is recommended for new users according to Docker documentation?
     answers:
       - { value: '-v flag', correct: false }
@@ -17,7 +17,7 @@ questions:
       - { value: 'Neither, use Dockerfile VOLUME', correct: false }
     help: https://docs.docker.com/storage/volumes/
 
-  - uuid: 5c9a8e4f-7d2b-1e3a-6f9c-3d8a5e7b2f4c
+  - uuid: ba16368c-f8e9-4de3-a0e6-3ae85ba844a1
     question: How do you create a named volume using the -v syntax?
     answers:
       - { value: 'docker run -v myvolume:/data ...', correct: true }
@@ -26,7 +26,7 @@ questions:
       - { value: 'docker run --volume myvolume /data ...', correct: false }
     help: https://docs.docker.com/storage/volumes/
 
-  - uuid: 1d7a4f9e-8c2b-5e3a-9f6c-2d8a4e7b3f1c
+  - uuid: 1a8df090-90e9-4d72-921e-75ceba2ba345
     question: How do you create a named volume using the --mount syntax?
     answers:
       - { value: '--mount myvolume:/data', correct: false }
@@ -35,7 +35,7 @@ questions:
       - { value: '--mount name=myvolume,destination=/data', correct: false }
     help: https://docs.docker.com/storage/volumes/
 
-  - uuid: 6f3a2e9c-7d1b-4e8a-5f9c-3d7a2e8b1f4c
+  - uuid: 2f00164b-967f-4210-9c14-22e9cab7a26c
     question: How do you create a bind mount using the -v syntax?
     answers:
       - { value: 'docker run -v /host/path:/container/path ...', correct: true }
@@ -44,7 +44,7 @@ questions:
       - { value: 'docker run --bind /host/path:/container/path ...', correct: false }
     help: https://docs.docker.com/storage/bind-mounts/
 
-  - uuid: 9e8a7f4c-8d1b-5e3a-6f9c-4d7a3e8b2f1c
+  - uuid: a024d741-7d4b-4f89-9a10-d81f55435e65
     question: How do you create a bind mount using the --mount syntax?
     answers:
       - { value: '--mount /host/path:/container/path', correct: false }
@@ -53,7 +53,7 @@ questions:
       - { value: '--mount mode=bind,src=/host/path,dst=/container/path', correct: false }
     help: https://docs.docker.com/storage/bind-mounts/
 
-  - uuid: 3c4a9e8f-7d2b-5e1a-9f6c-2d8a5e7b3f4c
+  - uuid: bfa3c2a1-6857-4cd2-b9ff-b9865bfb6daa
     question: What happens with -v if the volume does not exist?
     answers:
       - { value: 'Docker returns an error', correct: false }
@@ -62,7 +62,7 @@ questions:
       - { value: 'Docker asks for user confirmation', correct: false }
     help: https://docs.docker.com/storage/volumes/
 
-  - uuid: 7d4a2f9e-8c1b-4e3a-6f9c-3d7a2e8b5f1c
+  - uuid: 2c57743f-c06e-4123-ac73-50763360a166
     question: How do you make a volume read-only with -v?
     answers:
       - { value: 'docker run -v myvolume:/data:ro ...', correct: true }
@@ -71,7 +71,7 @@ questions:
       - { value: 'Volumes cannot be read-only', correct: false }
     help: https://docs.docker.com/storage/volumes/
 
-  - uuid: 4e2a7f9c-8d1b-5e3a-9f6c-3d7a4e8b2f1c
+  - uuid: 2e24dd18-7a81-49fb-aedd-2f2973fdc9f8
     question: How do you make a volume read-only with --mount?
     answers:
       - { value: '--mount type=volume,source=myvolume,target=/data,ro', correct: false }
@@ -80,7 +80,7 @@ questions:
       - { value: '--mount type=volume,source=myvolume,target=/data,mode=ro', correct: false }
     help: https://docs.docker.com/storage/volumes/
 
-  - uuid: 8c2a1f9e-7d3b-5e4a-6f9c-2d8a5e7b3f1c
+  - uuid: fc39db6e-026a-46cb-aed3-284c1587e2ee
     question: Which syntax provides better error messages when there are configuration issues?
     answers:
       - { value: '-v syntax', correct: false }
@@ -89,7 +89,7 @@ questions:
       - { value: 'Neither provides errors', correct: false }
     help: https://docs.docker.com/storage/volumes/
 
-  - uuid: 5f8a9e3c-7d2b-4e1a-6f9c-3d7a5e8b2f4c
+  - uuid: bd68ad02-f2b4-456e-aae4-9598a421b8e4
     question: Can you use -v and --mount in the same docker run command?
     answers:
       - { value: 'No, only one is allowed', correct: false }
@@ -98,7 +98,7 @@ questions:
       - { value: 'Only with bind mounts', correct: false }
     help: https://docs.docker.com/storage/volumes/
 
-  - uuid: 9d3a7f2e-8c1b-5e4a-6f9c-2d8a4e7b3f1c
+  - uuid: fa696605-3ced-4026-898d-74b65e856278
     question: Which syntax is required for Docker Swarm services?
     answers:
       - { value: '-v flag', correct: false }

@@ -1,5 +1,5 @@
 questions:
-  - uuid: 8f3a9e7c-4d2b-5e1a-9f6c-3d8a7e2b4f1c
+  - uuid: c370dcf5-7ea3-4587-9575-09b5f6f14fcc
     question: Which command connects a running container to an existing network?
     answers:
       - { value: 'docker attach <container> <network>', correct: false }
@@ -8,7 +8,7 @@ questions:
       - { value: 'docker container connect <network>', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_connect/
 
-  - uuid: 2e7f4a9c-8d1b-5e3a-6f9c-4d7a3e8b2f1c
+  - uuid: 88346aad-6075-4bcc-91f0-66ad183e1f07
     question: Can a container be connected to multiple networks simultaneously?
     answers:
       - { value: 'No, only one network per container', correct: false }
@@ -17,7 +17,7 @@ questions:
       - { value: 'Only user-defined bridge networks', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_connect/
 
-  - uuid: 5c8a4f9e-7d2b-1e3a-6f9c-3d7a5e8b2f4c
+  - uuid: 5c7c6b27-8fbe-44bf-a3bd-14ffe3f72ce0
     question: Which command disconnects a container from a network?
     answers:
       - { value: 'docker network remove <network> <container>', correct: false }
@@ -26,7 +26,7 @@ questions:
       - { value: 'docker container detach <network>', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_disconnect/
 
-  - uuid: 1d9e7f3a-8c2b-5e4a-9f6c-2d8a4e7b3f1c
+  - uuid: 4f9429c3-5217-48db-8378-efcf09e070d5
     question: What happens to a running container when you disconnect it from its only network?
     answers:
       - { value: 'The container stops running', correct: false }
@@ -35,7 +35,7 @@ questions:
       - { value: 'Docker returns an error', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_disconnect/
 
-  - uuid: 6f2a9e7c-4d1b-8e3a-5f9c-3d7a2e8b1f4c
+  - uuid: 4adec5bb-ea4f-4ff2-81ef-f7e3865d33ed
     question: Can you specify an IP address when connecting a container to a network?
     answers:
       - { value: 'No, IPs are always assigned automatically', correct: false }
@@ -44,7 +44,7 @@ questions:
       - { value: 'Only on macvlan networks', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_connect/
 
-  - uuid: 9e4f7a2c-8d1b-5e3a-6f9c-4d7a3e8b2f1c
+  - uuid: 888fc18d-2131-4e15-a875-addeefe78b6b
     question: Can you add network aliases when connecting a container to a network?
     answers:
       - { value: 'No, aliases can only be set at container creation', correct: false }
@@ -53,7 +53,7 @@ questions:
       - { value: 'Only with overlay networks in Swarm', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_connect/
 
-  - uuid: 3c8e4f9a-7d2b-5e1a-9f6c-2d8a5e7b3f4c
+  - uuid: a7528ba8-4d29-4e26-89e9-69d8aff89b67
     question: What happens if you try to connect a container to a network it's already connected to?
     answers:
       - { value: 'Docker creates a second connection', correct: false }
@@ -62,7 +62,7 @@ questions:
       - { value: 'Docker replaces the existing connection', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_connect/
 
-  - uuid: 7d2f9a5e-8c1b-4e3a-6f9c-3d7a2e8b5f1c
+  - uuid: f4048e23-4044-4ada-bef8-6c812ebee479
     question: Can you force disconnect a container from a network?
     answers:
       - { value: 'No, disconnection requires container restart', correct: false }
@@ -71,7 +71,7 @@ questions:
       - { value: 'Force disconnect is not supported', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_disconnect/
 
-  - uuid: 4e9a7f2c-8d1b-5e3a-9f6c-3d7a4e8b2f1c
+  - uuid: ebbe8c8f-8ecf-47e4-b395-648731a1ae58
     question: How can you view which networks a container is connected to?
     answers:
       - { value: 'docker network ls', correct: false }
@@ -80,7 +80,7 @@ questions:
       - { value: 'docker ps --networks', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/inspect/
 
-  - uuid: 8c3f1a9e-7d2b-5e4a-6f9c-2d8a5e7b3f1c
+  - uuid: 12f02a72-9dea-469a-8536-464a21e25bce
     question: When would you dynamically connect a container to multiple networks?
     answers:
       - { value: 'When the container needs to communicate with services on different networks', correct: true }

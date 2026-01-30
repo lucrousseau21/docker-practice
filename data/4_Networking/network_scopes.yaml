@@ -1,5 +1,5 @@
 questions:
-  - uuid: 8e4a9f7c-2d1b-5e3a-6f9c-3d7a2e8b4f1c
+  - uuid: 6dd95383-aa38-4025-b06c-f40351bdfa37
     question: What are the three network scopes in Docker?
     answers:
       - { value: 'public, private, internal', correct: false }
@@ -8,7 +8,7 @@ questions:
       - { value: 'single, multi, cluster', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
-  - uuid: 2e7a4f9c-8d1b-5e3a-9f6c-4d7a3e8b2f1c
+  - uuid: 5dc10b9f-e85e-4d70-9acc-ad2b25934a7d
     question: What does the 'local' network scope mean?
     answers:
       - { value: 'The network spans all nodes in the cluster', correct: false }
@@ -17,7 +17,7 @@ questions:
       - { value: 'The network has no external access', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
-  - uuid: 5c9a8e4f-7d2b-1e3a-6f9c-3d8a5e7b2f4c
+  - uuid: 474ef73e-6e20-4ce8-a874-ae035f2001ab
     question: Which network drivers typically have a 'local' scope?
     answers:
       - { value: 'overlay', correct: false }
@@ -26,7 +26,7 @@ questions:
       - { value: 'All network drivers', correct: false }
     help: https://docs.docker.com/network/drivers/
 
-  - uuid: 1d4a7f9e-8c2b-5e3a-9f6c-2d8a4e7b3f1c
+  - uuid: 172ec5ae-6de7-4593-918a-016b60103bfb
     question: What does the 'swarm' network scope indicate?
     answers:
       - { value: 'The network is isolated to a single container', correct: false }
@@ -35,7 +35,7 @@ questions:
       - { value: 'The network uses NAT', correct: false }
     help: https://docs.docker.com/engine/swarm/networking/
 
-  - uuid: 6f2a9e8c-7d1b-4e3a-5f9c-3d7a2e8b1f4c
+  - uuid: f13bc25b-b3a2-4aff-be7a-1693ef9d5a34
     question: Which network driver typically has a 'swarm' scope?
     answers:
       - { value: 'bridge', correct: false }
@@ -44,7 +44,7 @@ questions:
       - { value: 'none', correct: false }
     help: https://docs.docker.com/engine/swarm/networking/
 
-  - uuid: 9e7a4f2c-8d1b-5e3a-6f9c-4d7a3e8b2f1c
+  - uuid: f74374b7-8d92-47a3-bfff-3c12a4e39fd5
     question: What is the purpose of the 'global' network scope?
     answers:
       - { value: 'For networks accessible from the internet', correct: false }
@@ -53,7 +53,7 @@ questions:
       - { value: 'For public Docker registries', correct: false }
     help: https://docs.docker.com/engine/extend/plugins_network/
 
-  - uuid: 3c8a4e9f-7d2b-5e1a-9f6c-2d8a5e7b3f4c
+  - uuid: 0cd206af-bfe6-4983-ba23-e1e2c71a0c9e
     question: Can you manually specify a scope when creating a network?
     answers:
       - { value: 'Yes, using the --scope flag', correct: false }
@@ -62,7 +62,7 @@ questions:
       - { value: 'Only in Swarm mode', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_create/
 
-  - uuid: 7d9a2f5e-8c1b-4e3a-6f9c-3d7a2e8b5f1c
+  - uuid: af0ae088-4938-4135-b63c-6ed93467dc86
     question: How can you view the scope of a network?
     answers:
       - { value: 'docker network ls shows the Scope column', correct: true }
@@ -71,7 +71,7 @@ questions:
       - { value: 'Scope is not visible to users', correct: false }
     help: https://docs.docker.com/engine/reference/commandline/network_ls/
 
-  - uuid: 4e2a9f7c-8d1b-5e3a-9f6c-3d7a4e8b2f1c
+  - uuid: a46cae3b-7033-444e-825b-9f4710740241
     question: What happens when you try to create an overlay network outside of Swarm mode?
     answers:
       - { value: 'The network is created with local scope', correct: false }
@@ -80,7 +80,7 @@ questions:
       - { value: 'Overlay networks work the same outside Swarm', correct: false }
     help: https://docs.docker.com/network/drivers/overlay/
 
-  - uuid: 8c1a3f9e-7d2b-5e4a-6f9c-2d8a5e7b3f1c
+  - uuid: 636226f3-efd2-4622-aa1a-c973c9c71a0c
     question: Can services on different Swarm clusters communicate via networks with the same name?
     answers:
       - { value: 'Yes, if the networks have the same name', correct: false }

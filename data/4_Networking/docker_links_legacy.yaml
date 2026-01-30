@@ -1,5 +1,5 @@
 questions:
-  - uuid: 7b4f9e2a-8d1c-5e3a-6f9c-3d7a2e8b4f1c
+  - uuid: eb71a5b7-d426-4f3b-b969-8d3b4a31bf48
     question: What was the original purpose of Docker links?
     answers:
       - { value: 'To create network bridges', correct: false }
@@ -8,7 +8,7 @@ questions:
       - { value: 'To manage container storage', correct: false }
     help: https://docs.docker.com/network/links/
 
-  - uuid: 2e8a4f9c-7d1b-5e3a-9f6c-4d7a3e8b2f1c
+  - uuid: 3a53a325-77a8-4d17-b2b7-78021423ce3c
     question: Why are Docker links considered legacy?
     answers:
       - { value: 'They are too slow', correct: false }
@@ -17,7 +17,7 @@ questions:
       - { value: 'They require root privileges', correct: false }
     help: https://docs.docker.com/network/links/
 
-  - uuid: 5c9e7f4a-8d2b-1e3a-6f9c-3d8a5e7b2f4c
+  - uuid: 557a9e94-7356-4386-909e-e516fde83a17
     question: How do you create a link between containers using the legacy method?
     answers:
       - { value: 'docker link <container1> <container2>', correct: false }
@@ -26,7 +26,7 @@ questions:
       - { value: 'docker connect --link <container>', correct: false }
     help: https://docs.docker.com/network/links/
 
-  - uuid: 1d4f9a7e-8c2b-5e3a-9f6c-2d8a4e7b3f1c
+  - uuid: f6cc2da9-057c-4355-89e9-8d852490dd4f
     question: What information does Docker inject into a linked container?
     answers:
       - { value: 'Only environment variables', correct: false }
@@ -35,7 +35,7 @@ questions:
       - { value: 'Network configuration files', correct: false }
     help: https://docs.docker.com/network/links/
 
-  - uuid: 6f8a2e9c-7d1b-4e3a-5f9c-3d7a2e8b1f4c
+  - uuid: 6083cc72-adc4-4a9f-94b7-111e90de7dcb
     question: What is a key limitation of Docker links?
     answers:
       - { value: 'They do not work in Swarm mode', correct: false }
@@ -44,7 +44,7 @@ questions:
       - { value: 'They consume more memory', correct: false }
     help: https://docs.docker.com/network/links/
 
-  - uuid: 9e7f4a2c-8d1b-5e3a-6f9c-4d7a3e8b2f1c
+  - uuid: 8b492ba9-4c64-430b-9703-465cd4684d79
     question: How do user-defined networks improve upon Docker links?
     answers:
       - { value: 'They are faster', correct: false }
@@ -53,7 +53,7 @@ questions:
       - { value: 'They work only on Windows', correct: false }
     help: https://docs.docker.com/network/bridge/#differences-between-user-defined-bridges-and-the-default-bridge
 
-  - uuid: 3c4e8f9a-7d2b-5e1a-9f6c-2d8a5e7b3f4c
+  - uuid: 2e951d3d-a738-4d88-bb16-4af4e6049a91
     question: Can you use Docker links on user-defined networks?
     answers:
       - { value: 'Yes, links are required on user-defined networks', correct: false }
@@ -62,7 +62,7 @@ questions:
       - { value: 'Only in Swarm mode', correct: false }
     help: https://docs.docker.com/network/bridge/#differences-between-user-defined-bridges-and-the-default-bridge
 
-  - uuid: 7d9f2a5e-8c1b-4e3a-6f9c-3d7a2e8b5f1c
+  - uuid: dec488e4-55b6-4813-b451-70521809063d
     question: What happens to links when a container is restarted?
     answers:
       - { value: 'Links are automatically re-established', correct: true }
@@ -71,7 +71,7 @@ questions:
       - { value: 'Links are permanently broken', correct: false }
     help: https://docs.docker.com/network/links/
 
-  - uuid: 4e2a7f9c-8d1b-5e3a-9f6c-3d7a4e8b2f1c
+  - uuid: ca267e0f-6560-42e1-99d0-c5ace50d8e30
     question: What is the recommended replacement for Docker links?
     answers:
       - { value: 'Host networking', correct: false }
@@ -80,7 +80,7 @@ questions:
       - { value: 'Manual IP configuration', correct: false }
     help: https://docs.docker.com/network/bridge/
 
-  - uuid: 8c1f3a9e-7d2b-5e4a-6f9c-2d8a5e7b3f1c
+  - uuid: 0f0f4f8e-a505-4949-b8b2-2ec88abb0f4c
     question: Are Docker links supported in Docker Swarm mode?
     answers:
       - { value: 'Yes, with full functionality', correct: false }
