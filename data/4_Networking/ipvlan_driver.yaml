@@ -3,7 +3,7 @@ questions:
     question: What is the primary use case for the ipvlan network driver?
     answers:
       - { value: 'To create isolated container networks', correct: false }
-      - { value: 'To assign containers their own MAC addresses on the physical network', correct: true }
+      - { value: 'To give containers routable IPs without needing unique MAC addresses', correct: true }
       - { value: 'To enable overlay networking in Swarm', correct: false }
       - { value: 'To disable networking for containers', correct: false }
     help: https://docs.docker.com/network/drivers/ipvlan/
