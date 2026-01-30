@@ -1,5 +1,5 @@
 questions:
-  - uuid: a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d
+  - uuid: f890659d-9ea4-4b26-93d9-274a773d2962
     question: What is a Docker context?
     answers:
       - { value: 'A way to manage and switch between multiple Docker environments', correct: true }
@@ -8,7 +8,7 @@ questions:
       - { value: 'The runtime environment of a container', correct: false }
     help: https://docs.docker.com/engine/context/working-with-contexts/
 
-  - uuid: b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e
+  - uuid: 8b8a541b-ecc1-4216-997a-74e9b63bed54
     question: How do you create a new Docker context?
     answers:
       - { value: 'docker context create <name> --docker "host=tcp://host:port"', correct: true }
@@ -17,7 +17,7 @@ questions:
       - { value: 'docker config context <name> <host>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/context/create/
 
-  - uuid: c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f
+  - uuid: 7b3d9df8-9fc0-4956-a646-0b87b29650fb
     question: How do you list all available Docker contexts?
     answers:
       - { value: 'docker context ls', correct: true }
@@ -26,7 +26,7 @@ questions:
       - { value: 'docker config contexts', correct: false }
     help: https://docs.docker.com/reference/cli/docker/context/ls/
 
-  - uuid: d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a
+  - uuid: 31dbbada-1acd-4196-9562-3b28a83878b0
     question: How do you switch to a different Docker context?
     answers:
       - { value: 'docker context use <context-name>', correct: true }
@@ -35,7 +35,7 @@ questions:
       - { value: 'docker use context <context-name>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/context/use/
 
-  - uuid: e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b
+  - uuid: a63bce46-2268-4799-8987-29d52e796bd3
     question: What is the name of the default Docker context?
     answers:
       - { value: 'default', correct: true }
@@ -44,7 +44,7 @@ questions:
       - { value: 'main', correct: false }
     help: https://docs.docker.com/engine/context/working-with-contexts/
 
-  - uuid: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c
+  - uuid: 0a6eed2e-f658-4245-8a4a-641c0d132a79
     question: How do you view details about a specific context?
     answers:
       - { value: 'docker context inspect <context-name>', correct: true }
@@ -53,7 +53,7 @@ questions:
       - { value: 'docker inspect context <context-name>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/context/inspect/
 
-  - uuid: a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d
+  - uuid: 46337d05-4fd1-4224-a738-f96fa650dcd1
     question: How do you remove a Docker context?
     answers:
       - { value: 'docker context rm <context-name>', correct: true }
@@ -62,7 +62,7 @@ questions:
       - { value: 'docker rm context <context-name>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/context/rm/
 
-  - uuid: b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e
+  - uuid: 9f25092d-97b0-49e9-9424-bc8ec2891043
     question: Can you remove the currently active Docker context?
     answers:
       - { value: 'No, you must switch to a different context first', correct: true }
@@ -71,7 +71,7 @@ questions:
       - { value: 'Only if it is not the default context', correct: false }
     help: https://docs.docker.com/reference/cli/docker/context/rm/
 
-  - uuid: c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f
+  - uuid: c81eb3c0-0157-4330-af85-52530cf429fd
     question: What information is stored in a Docker context?
     answers:
       - { value: 'Docker host endpoint, TLS settings, and orchestrator type', correct: true }
@@ -80,7 +80,7 @@ questions:
       - { value: 'Image registry credentials', correct: false }
     help: https://docs.docker.com/engine/context/working-with-contexts/
 
-  - uuid: d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a
+  - uuid: 444b7a4c-b9dc-4792-b1ef-bce4fcd3c2fe
     question: How can you specify which context to use without switching the default?
     answers:
       - { value: 'Use the --context flag with docker commands', correct: true }
@@ -89,7 +89,7 @@ questions:
       - { value: 'This is not possible', correct: false }
     help: https://docs.docker.com/engine/context/working-with-contexts/
 
-  - uuid: e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b
+  - uuid: c733a5ca-118c-4cb5-b795-c230757d1661
     question: How do you export a Docker context to share with others?
     answers:
       - { value: 'docker context export <context-name> <file>', correct: true }
@@ -98,7 +98,7 @@ questions:
       - { value: 'docker context backup <context-name> <file>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/context/export/
 
-  - uuid: f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c
+  - uuid: 22514829-d6a6-480b-ae94-d6b3f872dfe8
     question: How do you import a Docker context from a file?
     answers:
       - { value: 'docker context import <context-name> <file>', correct: true }
@@ -107,7 +107,7 @@ questions:
       - { value: 'docker context restore <file>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/context/import/
 
-  - uuid: a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d
+  - uuid: c6fca3a5-d208-4e74-aa7a-306d3db5f740
     question: Where are Docker contexts stored on the local system?
     answers:
       - { value: '~/.docker/contexts/', correct: true }
@@ -116,7 +116,7 @@ questions:
       - { value: '~/.config/docker/contexts/', correct: false }
     help: https://docs.docker.com/engine/context/working-with-contexts/
 
-  - uuid: b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e
+  - uuid: c9692746-efd2-4e9b-851a-a72f5417be44
     question: Can you use Docker contexts to connect to remote Docker hosts over SSH?
     answers:
       - { value: 'Yes, by specifying ssh:// in the host URL', correct: true }
@@ -125,7 +125,7 @@ questions:
       - { value: 'Only on Linux hosts', correct: false }
     help: https://docs.docker.com/engine/context/working-with-contexts/
 
-  - uuid: c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f
+  - uuid: 7d2ef21b-a70c-4a20-b8e4-e6094000972b
     question: How do you update the description of an existing context?
     answers:
       - { value: 'docker context update <context-name> --description "new description"', correct: true }
@@ -134,7 +134,7 @@ questions:
       - { value: 'Descriptions cannot be changed after creation', correct: false }
     help: https://docs.docker.com/reference/cli/docker/context/update/
 
-  - uuid: d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a
+  - uuid: 80c489fd-b5de-4bb1-b471-8ff459dc78fe
     question: What environment variable can override the active Docker context?
     answers:
       - { value: 'DOCKER_CONTEXT', correct: true }

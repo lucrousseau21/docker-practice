@@ -1,5 +1,5 @@
 questions:
-  - uuid: a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d
+  - uuid: 43b3851b-8978-45da-92ad-f592146c681f
     question: What are Docker plugins used for?
     answers:
       - { value: 'To extend Docker functionality with additional drivers and services', correct: true }
@@ -8,7 +8,7 @@ questions:
       - { value: 'To manage Docker daemon configuration', correct: false }
     help: https://docs.docker.com/engine/extend/
 
-  - uuid: b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e
+  - uuid: 12b6099c-c506-44ce-8370-fa084a141bf0
     question: What types of plugins does Docker support?
     answers:
       - { value: 'Volume, network, authorization, logging, and IPAM plugins', correct: true }
@@ -17,7 +17,7 @@ questions:
       - { value: 'CLI, daemon, and runtime plugins', correct: false }
     help: https://docs.docker.com/engine/extend/
 
-  - uuid: c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f
+  - uuid: 288378eb-3baa-4fd6-bf27-d9dd88527282
     question: How do you install a Docker plugin?
     answers:
       - { value: 'docker plugin install <plugin-name>', correct: true }
@@ -26,7 +26,7 @@ questions:
       - { value: 'docker plugin add <plugin-name>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/plugin/install/
 
-  - uuid: d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a
+  - uuid: b40fc2d8-938d-4941-b1a9-d2d9830218a4
     question: How do you list all installed Docker plugins?
     answers:
       - { value: 'docker plugin ls', correct: true }
@@ -35,7 +35,7 @@ questions:
       - { value: 'docker list plugins', correct: false }
     help: https://docs.docker.com/reference/cli/docker/plugin/ls/
 
-  - uuid: e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b
+  - uuid: 2acc05b7-eb2c-4593-ad84-a05c1b25451b
     question: What is the state of a plugin after installation but before enabling?
     answers:
       - { value: 'Disabled', correct: true }
@@ -44,7 +44,7 @@ questions:
       - { value: 'Pending', correct: false }
     help: https://docs.docker.com/reference/cli/docker/plugin/install/
 
-  - uuid: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c
+  - uuid: 90ece04d-8a87-4e9e-880e-4e206313b040
     question: How do you enable a Docker plugin?
     answers:
       - { value: 'docker plugin enable <plugin-name>', correct: true }
@@ -53,7 +53,7 @@ questions:
       - { value: 'docker plugin activate <plugin-name>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/plugin/enable/
 
-  - uuid: a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d
+  - uuid: 85b356b6-8798-4d67-9bf2-c10de406bec1
     question: How do you disable a Docker plugin?
     answers:
       - { value: 'docker plugin disable <plugin-name>', correct: true }
@@ -62,7 +62,7 @@ questions:
       - { value: 'docker plugin deactivate <plugin-name>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/plugin/disable/
 
-  - uuid: b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e
+  - uuid: 1f8e5c35-8cb0-4389-b993-d917ba2e2bd0
     question: Can you remove an enabled plugin?
     answers:
       - { value: 'No, you must disable it first', correct: true }
@@ -71,7 +71,7 @@ questions:
       - { value: 'Only if no containers are using it', correct: false }
     help: https://docs.docker.com/reference/cli/docker/plugin/rm/
 
-  - uuid: c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f
+  - uuid: 28ff2f2c-1558-4974-93bd-03207a0f578b
     question: How do you remove a Docker plugin?
     answers:
       - { value: 'docker plugin rm <plugin-name>', correct: true }
@@ -80,7 +80,7 @@ questions:
       - { value: 'docker rm plugin <plugin-name>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/plugin/rm/
 
-  - uuid: d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a
+  - uuid: fa8d20a1-6c7b-4a54-bb74-89ea7745755e
     question: How do you inspect details about a plugin?
     answers:
       - { value: 'docker plugin inspect <plugin-name>', correct: true }
@@ -89,7 +89,7 @@ questions:
       - { value: 'docker plugin info <plugin-name>', correct: false }
     help: https://docs.docker.com/reference/cli/docker/plugin/inspect/
 
-  - uuid: e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b
+  - uuid: 48dd6651-b4f8-4711-8cb4-442ff4a2f625
     question: What is a volume plugin used for?
     answers:
       - { value: 'To provide custom volume drivers for different storage backends', correct: true }
@@ -98,7 +98,7 @@ questions:
       - { value: 'To encrypt volumes at rest', correct: false }
     help: https://docs.docker.com/engine/extend/plugins_volume/
 
-  - uuid: f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c
+  - uuid: 11df5059-b762-4f4a-a67f-690691eb1f51
     question: What is a network plugin used for?
     answers:
       - { value: 'To implement custom network drivers and connectivity solutions', correct: true }
@@ -107,7 +107,7 @@ questions:
       - { value: 'To manage DNS resolution', correct: false }
     help: https://docs.docker.com/engine/extend/plugins_network/
 
-  - uuid: a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d
+  - uuid: e84c25d6-2de9-4df5-96b6-78252b2789b3
     question: What is an authorization plugin used for?
     answers:
       - { value: 'To control access to Docker daemon APIs and resources', correct: true }
@@ -116,7 +116,7 @@ questions:
       - { value: 'To encrypt Docker API traffic', correct: false }
     help: https://docs.docker.com/engine/extend/plugins_authorization/
 
-  - uuid: b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e
+  - uuid: 9d65358a-4371-4a96-b2ed-f3771f39598e
     question: How do you upgrade a Docker plugin?
     answers:
       - { value: 'docker plugin upgrade <plugin-name>', correct: true }
@@ -125,7 +125,7 @@ questions:
       - { value: 'Uninstall and reinstall the plugin', correct: false }
     help: https://docs.docker.com/reference/cli/docker/plugin/upgrade/
 
-  - uuid: c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f
+  - uuid: 55f93ca0-4972-4bcf-9982-6b5c462dbae9
     question: Can you create your own custom Docker plugin?
     answers:
       - { value: 'Yes, using the Docker Plugin API', correct: true }
@@ -134,7 +134,7 @@ questions:
       - { value: 'Only for volume and network types', correct: false }
     help: https://docs.docker.com/engine/extend/
 
-  - uuid: d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a
+  - uuid: 01219e91-a0ec-4b23-80c5-43ff14e21b37
     question: How do you set options when installing a plugin?
     answers:
       - { value: 'docker plugin install <plugin> --grant-all-permissions KEY=VALUE', correct: true }

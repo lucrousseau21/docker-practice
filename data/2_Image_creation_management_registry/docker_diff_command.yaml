@@ -1,5 +1,5 @@
 questions:
-  - uuid: a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d
+  - uuid: c8a9ed29-b0f7-4892-843c-26f14d51991c
     question: What does the `docker diff` command show?
     answers:
       - { value: 'Changes to files and directories in a container filesystem', correct: true }
@@ -8,7 +8,7 @@ questions:
       - { value: 'Differences in network configuration', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e
+  - uuid: 6d704015-63ba-4ca2-969f-a4ec3a906acc
     question: What are the three types of changes shown by `docker diff`?
     answers:
       - { value: 'A (added), D (deleted), C (changed)', correct: true }
@@ -17,7 +17,7 @@ questions:
       - { value: '+ (added), - (removed), * (modified)', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f
+  - uuid: cfdd7c48-adfc-4d05-9039-bd7613725fee
     question: What does the 'A' prefix mean in `docker diff` output?
     answers:
       - { value: 'A file or directory was added', correct: true }
@@ -26,7 +26,7 @@ questions:
       - { value: 'A file was archived', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a
+  - uuid: 7e60b697-8647-4fa8-8ad9-7be53bad0286
     question: What does the 'D' prefix mean in `docker diff` output?
     answers:
       - { value: 'A file or directory was deleted', correct: true }
@@ -35,7 +35,7 @@ questions:
       - { value: 'A file was downloaded', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b
+  - uuid: d09d8aa8-d101-45ed-91e8-c538c9adb5bc
     question: What does the 'C' prefix mean in `docker diff` output?
     answers:
       - { value: 'A file or directory was changed/modified', correct: true }
@@ -44,7 +44,7 @@ questions:
       - { value: 'A file was cached', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c
+  - uuid: d8b0efb1-8abc-4add-a110-1e551f8f7e18
     question: Can `docker diff` show changes in a stopped container?
     answers:
       - { value: 'Yes, it works on both running and stopped containers', correct: true }
@@ -53,7 +53,7 @@ questions:
       - { value: 'Only with the --stopped flag', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d
+  - uuid: 983df210-e804-498c-8f32-de14b6564e43
     question: What is `docker diff` comparing against?
     answers:
       - { value: 'The original image filesystem', correct: true }
@@ -62,7 +62,7 @@ questions:
       - { value: 'Other containers from the same image', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e
+  - uuid: 1f469ba3-8960-4801-8c01-a35d7e0d1a1c
     question: Does `docker diff` show changes to mounted volumes?
     answers:
       - { value: 'No, only changes to the container writable layer', correct: true }
@@ -71,7 +71,7 @@ questions:
       - { value: 'Only with the --volumes flag', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f
+  - uuid: 24203a08-e513-442c-ac1b-eae140085ccc
     question: When would you use `docker diff`?
     answers:
       - { value: 'To debug what changed in a container or before committing changes', correct: true }
@@ -80,7 +80,7 @@ questions:
       - { value: 'To view configuration differences', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a
+  - uuid: b1ae732a-a08a-45b9-bd93-1470862f2724
     question: How does `docker diff` relate to image layers?
     answers:
       - { value: 'It shows changes in the writable layer on top of image layers', correct: true }
@@ -89,7 +89,7 @@ questions:
       - { value: 'It has no relation to image layers', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b
+  - uuid: 11c7912a-55ed-42a3-a276-c4fb1cfee6dc
     question: Can `docker diff` show the content of changed files?
     answers:
       - { value: 'No, it only shows which files changed, not the content', correct: true }
@@ -98,7 +98,7 @@ questions:
       - { value: 'Yes, with the --content flag', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c
+  - uuid: a7f7e066-0b21-4f67-99b5-b3c7f58c9213
     question: What is the relationship between `docker diff` and `docker commit`?
     answers:
       - { value: 'docker diff shows changes that would be captured by docker commit', correct: true }
@@ -107,7 +107,7 @@ questions:
       - { value: 'They are unrelated commands', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d
+  - uuid: a9f97291-9566-484b-9ceb-734961db425a
     question: If a file is modified, does `docker diff` show it as 'C' or 'D' and 'A'?
     answers:
       - { value: 'As C (changed)', correct: true }
@@ -116,7 +116,7 @@ questions:
       - { value: 'Depends on the change type', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e
+  - uuid: ff5f5414-694c-4a2c-8802-3a925d60e800
     question: Does `docker diff` require the container to be committed first?
     answers:
       - { value: 'No, it can show differences before committing', correct: true }
@@ -125,7 +125,7 @@ questions:
       - { value: 'Depends on the storage driver', correct: false }
     help: https://docs.docker.com/reference/cli/docker/container/diff/
 
-  - uuid: c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f
+  - uuid: 7a051952-755f-4361-8b19-95fef57355cc
     question: What output format does `docker diff` use?
     answers:
       - { value: 'Plain text list with change type prefix and file path', correct: true }
