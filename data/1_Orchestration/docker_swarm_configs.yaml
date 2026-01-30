@@ -1,0 +1,144 @@
+questions:
+  - uuid: a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d
+    question: What are Docker configs used for in Swarm mode?
+    answers:
+      - { value: 'To store non-sensitive configuration data accessible to services', correct: true }
+      - { value: 'To store sensitive data like passwords', correct: false }
+      - { value: 'To configure the Docker daemon', correct: false }
+      - { value: 'To define network configurations', correct: false }
+    help: https://docs.docker.com/engine/swarm/configs/
+
+  - uuid: b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e
+    question: What is the main difference between Docker configs and secrets?
+    answers:
+      - { value: 'Configs are for non-sensitive data; secrets are for sensitive data', correct: true }
+      - { value: 'Configs are encrypted; secrets are not', correct: false }
+      - { value: 'Configs work outside Swarm; secrets require Swarm', correct: false }
+      - { value: 'Configs are mutable; secrets are immutable', correct: false }
+    help: https://docs.docker.com/engine/swarm/configs/
+
+  - uuid: c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f
+    question: How do you create a Docker config from a file?
+    answers:
+      - { value: 'docker config create <config-name> <file>', correct: true }
+      - { value: 'docker create config <config-name> <file>', correct: false }
+      - { value: 'docker config add <config-name> --from-file <file>', correct: false }
+      - { value: 'docker swarm config create <file>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/config/create/
+
+  - uuid: d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a
+    question: How do you create a Docker config from stdin?
+    answers:
+      - { value: 'echo "data" | docker config create <config-name> -', correct: true }
+      - { value: 'docker config create <config-name> --stdin', correct: false }
+      - { value: 'docker config create <config-name> < data', correct: false }
+      - { value: 'cat data | docker config add <config-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/config/create/
+
+  - uuid: e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b
+    question: How do you attach a config to a service?
+    answers:
+      - { value: 'docker service create --config <config-name> <image>', correct: true }
+      - { value: 'docker service create --add-config <config-name> <image>', correct: false }
+      - { value: 'docker service create --env-config <config-name> <image>', correct: false }
+      - { value: 'docker service create --mount-config <config-name> <image>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/create/
+
+  - uuid: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c
+    question: Where are configs mounted in a container by default?
+    answers:
+      - { value: '/<config-name> in the root directory', correct: true }
+      - { value: '/run/configs/<config-name>', correct: false }
+      - { value: '/etc/configs/<config-name>', correct: false }
+      - { value: '/var/lib/docker/configs/<config-name>', correct: false }
+    help: https://docs.docker.com/engine/swarm/configs/
+
+  - uuid: a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d
+    question: Can you modify an existing Docker config?
+    answers:
+      - { value: 'No, configs are immutable; you must create a new one', correct: true }
+      - { value: 'Yes, using docker config update', correct: false }
+      - { value: 'Yes, using docker config modify', correct: false }
+      - { value: 'Only if no services are using it', correct: false }
+    help: https://docs.docker.com/engine/swarm/configs/
+
+  - uuid: b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e
+    question: How do you list all configs in a Swarm?
+    answers:
+      - { value: 'docker config ls', correct: true }
+      - { value: 'docker config list', correct: false }
+      - { value: 'docker swarm config ls', correct: false }
+      - { value: 'docker configs', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/config/ls/
+
+  - uuid: c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f
+    question: How do you inspect a config to see its details?
+    answers:
+      - { value: 'docker config inspect <config-name>', correct: true }
+      - { value: 'docker inspect config <config-name>', correct: false }
+      - { value: 'docker config show <config-name>', correct: false }
+      - { value: 'docker config get <config-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/config/inspect/
+
+  - uuid: d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a
+    question: Can you retrieve the actual data of a config using docker config inspect?
+    answers:
+      - { value: 'No, docker config inspect shows metadata only, not the actual data', correct: true }
+      - { value: 'Yes, the data is shown in base64 encoding', correct: false }
+      - { value: 'Yes, with the --show-data flag', correct: false }
+      - { value: 'Only for configs smaller than 1KB', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/config/inspect/
+
+  - uuid: e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b
+    question: How do you remove a config?
+    answers:
+      - { value: 'docker config rm <config-name>', correct: true }
+      - { value: 'docker config delete <config-name>', correct: false }
+      - { value: 'docker config remove <config-name>', correct: false }
+      - { value: 'docker swarm config rm <config-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/config/rm/
+
+  - uuid: f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c
+    question: Can you remove a config that is in use by a service?
+    answers:
+      - { value: 'No, you must first remove it from all services', correct: true }
+      - { value: 'Yes, services will continue using cached data', correct: false }
+      - { value: 'Yes, with the --force flag', correct: false }
+      - { value: 'Only if the service is not running', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/config/rm/
+
+  - uuid: a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d
+    question: How do you specify a custom target path for a config in a service?
+    answers:
+      - { value: 'docker service create --config source=cfg,target=/app/config.txt', correct: true }
+      - { value: 'docker service create --config cfg:/app/config.txt', correct: false }
+      - { value: 'docker service create --config cfg --path /app/config.txt', correct: false }
+      - { value: 'Custom paths are not supported', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/service/create/
+
+  - uuid: b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e
+    question: Can configs be used with standalone containers (non-Swarm)?
+    answers:
+      - { value: 'No, configs require Swarm mode', correct: true }
+      - { value: 'Yes, using docker run --config', correct: false }
+      - { value: 'Yes, but only on Linux', correct: false }
+      - { value: 'Yes, with docker-compose v3+', correct: false }
+    help: https://docs.docker.com/engine/swarm/configs/
+
+  - uuid: c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f
+    question: What permissions do config files have when mounted in containers?
+    answers:
+      - { value: 'Read-only with 444 permissions by default', correct: true }
+      - { value: 'Read-write with 644 permissions', correct: false }
+      - { value: 'Executable with 755 permissions', correct: false }
+      - { value: 'Depends on the original file permissions', correct: false }
+    help: https://docs.docker.com/engine/swarm/configs/
+
+  - uuid: d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a
+    question: How do you add labels to a config?
+    answers:
+      - { value: 'docker config create --label key=value <config-name> <file>', correct: true }
+      - { value: 'docker config label <config-name> key=value', correct: false }
+      - { value: 'docker config create --tag key=value <config-name> <file>', correct: false }
+      - { value: 'Labels cannot be added to configs', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/config/create/

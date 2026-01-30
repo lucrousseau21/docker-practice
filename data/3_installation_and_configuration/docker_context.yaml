@@ -1,0 +1,144 @@
+questions:
+  - uuid: a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d
+    question: What is a Docker context?
+    answers:
+      - { value: 'A way to manage and switch between multiple Docker environments', correct: true }
+      - { value: 'The directory where Dockerfile is located', correct: false }
+      - { value: 'The build context for creating images', correct: false }
+      - { value: 'The runtime environment of a container', correct: false }
+    help: https://docs.docker.com/engine/context/working-with-contexts/
+
+  - uuid: b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e
+    question: How do you create a new Docker context?
+    answers:
+      - { value: 'docker context create <name> --docker host=<host>', correct: true }
+      - { value: 'docker create context <name> <host>', correct: false }
+      - { value: 'docker context add <name> --host <host>', correct: false }
+      - { value: 'docker config context <name> <host>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/context/create/
+
+  - uuid: c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f
+    question: How do you list all available Docker contexts?
+    answers:
+      - { value: 'docker context ls', correct: true }
+      - { value: 'docker context list', correct: false }
+      - { value: 'docker contexts', correct: false }
+      - { value: 'docker config contexts', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/context/ls/
+
+  - uuid: d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a
+    question: How do you switch to a different Docker context?
+    answers:
+      - { value: 'docker context use <context-name>', correct: true }
+      - { value: 'docker context switch <context-name>', correct: false }
+      - { value: 'docker context set <context-name>', correct: false }
+      - { value: 'docker use context <context-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/context/use/
+
+  - uuid: e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b
+    question: What is the name of the default Docker context?
+    answers:
+      - { value: 'default', correct: true }
+      - { value: 'local', correct: false }
+      - { value: 'localhost', correct: false }
+      - { value: 'main', correct: false }
+    help: https://docs.docker.com/engine/context/working-with-contexts/
+
+  - uuid: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c
+    question: How do you view details about a specific context?
+    answers:
+      - { value: 'docker context inspect <context-name>', correct: true }
+      - { value: 'docker context show <context-name>', correct: false }
+      - { value: 'docker context info <context-name>', correct: false }
+      - { value: 'docker inspect context <context-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/context/inspect/
+
+  - uuid: a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d
+    question: How do you remove a Docker context?
+    answers:
+      - { value: 'docker context rm <context-name>', correct: true }
+      - { value: 'docker context delete <context-name>', correct: false }
+      - { value: 'docker context remove <context-name>', correct: false }
+      - { value: 'docker rm context <context-name>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/context/rm/
+
+  - uuid: b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e
+    question: Can you remove the currently active Docker context?
+    answers:
+      - { value: 'No, you must switch to a different context first', correct: true }
+      - { value: 'Yes, it will switch to default automatically', correct: false }
+      - { value: 'Yes, with the --force flag', correct: false }
+      - { value: 'Only if it is not the default context', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/context/rm/
+
+  - uuid: c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f
+    question: What information is stored in a Docker context?
+    answers:
+      - { value: 'Docker host endpoint, TLS settings, and orchestrator type', correct: true }
+      - { value: 'Only the Docker host URL', correct: false }
+      - { value: 'Container configurations and volumes', correct: false }
+      - { value: 'Image registry credentials', correct: false }
+    help: https://docs.docker.com/engine/context/working-with-contexts/
+
+  - uuid: d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a
+    question: How can you specify which context to use without switching the default?
+    answers:
+      - { value: 'Use the --context flag with docker commands', correct: true }
+      - { value: 'Use the -c flag with docker commands', correct: false }
+      - { value: 'Set the DOCKER_CONTEXT_OVERRIDE environment variable', correct: false }
+      - { value: 'This is not possible', correct: false }
+    help: https://docs.docker.com/engine/context/working-with-contexts/
+
+  - uuid: e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b
+    question: How do you export a Docker context to share with others?
+    answers:
+      - { value: 'docker context export <context-name> <file>', correct: true }
+      - { value: 'docker context save <context-name> <file>', correct: false }
+      - { value: 'docker export context <context-name> > <file>', correct: false }
+      - { value: 'docker context backup <context-name> <file>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/context/export/
+
+  - uuid: f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c
+    question: How do you import a Docker context from a file?
+    answers:
+      - { value: 'docker context import <context-name> <file>', correct: true }
+      - { value: 'docker context load <context-name> <file>', correct: false }
+      - { value: 'docker import context <file>', correct: false }
+      - { value: 'docker context restore <file>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/context/import/
+
+  - uuid: a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d
+    question: Where are Docker contexts stored on the local system?
+    answers:
+      - { value: '~/.docker/contexts/', correct: true }
+      - { value: '/var/lib/docker/contexts/', correct: false }
+      - { value: '/etc/docker/contexts/', correct: false }
+      - { value: '~/.config/docker/contexts/', correct: false }
+    help: https://docs.docker.com/engine/context/working-with-contexts/
+
+  - uuid: b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e
+    question: Can you use Docker contexts to connect to remote Docker hosts over SSH?
+    answers:
+      - { value: 'Yes, by specifying ssh:// in the host URL', correct: true }
+      - { value: 'No, only TCP connections are supported', correct: false }
+      - { value: 'Only with Docker Enterprise', correct: false }
+      - { value: 'Only on Linux hosts', correct: false }
+    help: https://docs.docker.com/engine/context/working-with-contexts/
+
+  - uuid: c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f
+    question: How do you update the description of an existing context?
+    answers:
+      - { value: 'docker context update <context-name> --description "new description"', correct: true }
+      - { value: 'docker context modify <context-name> --description "new description"', correct: false }
+      - { value: 'docker context set --description "new description" <context-name>', correct: false }
+      - { value: 'Descriptions cannot be changed after creation', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/context/update/
+
+  - uuid: d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a
+    question: What environment variable can override the active Docker context?
+    answers:
+      - { value: 'DOCKER_CONTEXT', correct: true }
+      - { value: 'DOCKER_ACTIVE_CONTEXT', correct: false }
+      - { value: 'DOCKER_DEFAULT_CONTEXT', correct: false }
+      - { value: 'CONTEXT', correct: false }
+    help: https://docs.docker.com/engine/context/working-with-contexts/

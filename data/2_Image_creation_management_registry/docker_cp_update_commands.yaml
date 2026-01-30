@@ -1,0 +1,135 @@
+questions:
+  - uuid: a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d
+    question: What does the `docker cp` command do?
+    answers:
+      - { value: 'Copies files between a container and the host filesystem', correct: true }
+      - { value: 'Creates a copy of a container', correct: false }
+      - { value: 'Copies images between registries', correct: false }
+      - { value: 'Clones a Docker volume', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/cp/
+
+  - uuid: b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e
+    question: How do you copy a file from a container to the host?
+    answers:
+      - { value: 'docker cp <container>:/path/to/file /host/path', correct: true }
+      - { value: 'docker copy <container>:/path/to/file /host/path', correct: false }
+      - { value: 'docker export <container> --file /path/to/file', correct: false }
+      - { value: 'docker container export /path/to/file /host/path', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/cp/
+
+  - uuid: c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f
+    question: How do you copy a file from the host to a container?
+    answers:
+      - { value: 'docker cp /host/path <container>:/path/to/destination', correct: true }
+      - { value: 'docker import /host/path <container>:/destination', correct: false }
+      - { value: 'docker container add /host/path <container>:/destination', correct: false }
+      - { value: 'docker upload /host/path <container>:/destination', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/cp/
+
+  - uuid: d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a
+    question: Can `docker cp` copy files to/from a stopped container?
+    answers:
+      - { value: 'Yes, docker cp works on both running and stopped containers', correct: true }
+      - { value: 'No, the container must be running', correct: false }
+      - { value: 'Only if you use the --stopped flag', correct: false }
+      - { value: 'Only for copying from container to host', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/cp/
+
+  - uuid: e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b
+    question: Does `docker cp` preserve file permissions and ownership?
+    answers:
+      - { value: 'Yes, by default it preserves UID/GID and permissions', correct: true }
+      - { value: 'No, files are always owned by root', correct: false }
+      - { value: 'Only if you use the --preserve flag', correct: false }
+      - { value: 'It depends on the storage driver', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/cp/
+
+  - uuid: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c
+    question: Can you copy files between two containers directly using `docker cp`?
+    answers:
+      - { value: 'No, you must copy to host first, then to the other container', correct: true }
+      - { value: 'Yes, using: docker cp container1:/path container2:/path', correct: false }
+      - { value: 'Yes, but only if containers are on the same network', correct: false }
+      - { value: 'Yes, with the --direct flag', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/cp/
+
+  - uuid: a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d
+    question: What happens if you use `docker cp` with a directory path that ends with `/.`?
+    answers:
+      - { value: 'It copies only the contents of the directory, not the directory itself', correct: true }
+      - { value: 'It creates a hidden directory', correct: false }
+      - { value: 'It results in an error', correct: false }
+      - { value: 'It has no special meaning', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/cp/
+
+  - uuid: b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e
+    question: What does the `docker update` command do?
+    answers:
+      - { value: 'Updates resource constraints and restart policies of running containers', correct: true }
+      - { value: 'Updates container images to the latest version', correct: false }
+      - { value: 'Updates Docker daemon configuration', correct: false }
+      - { value: 'Updates container environment variables', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/update/
+
+  - uuid: c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f
+    question: Which resource can be updated on a running container using `docker update`?
+    answers:
+      - { value: 'Memory limit, CPU shares, and restart policy', correct: true }
+      - { value: 'Port mappings', correct: false }
+      - { value: 'Volume mounts', correct: false }
+      - { value: 'Network settings', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/update/
+
+  - uuid: d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a
+    question: How do you update the memory limit of a running container to 512MB?
+    answers:
+      - { value: 'docker update --memory 512m <container>', correct: true }
+      - { value: 'docker container update --mem 512m <container>', correct: false }
+      - { value: 'docker modify --memory 512m <container>', correct: false }
+      - { value: 'docker update --memory-limit 512m <container>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/update/
+
+  - uuid: e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b
+    question: Can you update the CPU quota of a running container?
+    answers:
+      - { value: 'Yes, using --cpu-quota flag', correct: true }
+      - { value: 'No, you must recreate the container', correct: false }
+      - { value: 'Only if the container was created with --cpu-quota', correct: false }
+      - { value: 'Only for containers in Swarm mode', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/update/
+
+  - uuid: f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c
+    question: How do you change the restart policy of a running container?
+    answers:
+      - { value: 'docker update --restart always <container>', correct: true }
+      - { value: 'docker container set --restart always <container>', correct: false }
+      - { value: 'docker modify --restart-policy always <container>', correct: false }
+      - { value: 'You cannot change restart policy of a running container', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/update/
+
+  - uuid: a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d
+    question: Can you update multiple containers at once with `docker update`?
+    answers:
+      - { value: 'Yes, by specifying multiple container names', correct: true }
+      - { value: 'No, only one container at a time', correct: false }
+      - { value: 'Only with the --all flag', correct: false }
+      - { value: 'Only if containers belong to the same network', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/update/
+
+  - uuid: b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e
+    question: What settings CANNOT be updated with `docker update`?
+    answers:
+      - { value: 'Port mappings, volumes, and network connections', correct: true }
+      - { value: 'Memory and CPU limits', correct: false }
+      - { value: 'Restart policy', correct: false }
+      - { value: 'All settings can be updated', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/update/
+
+  - uuid: c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f
+    question: Does updating a container's resource limits require restarting it?
+    answers:
+      - { value: 'No, updates are applied dynamically without restart', correct: true }
+      - { value: 'Yes, you must restart the container', correct: false }
+      - { value: 'Only for CPU limits, not memory limits', correct: false }
+      - { value: 'It depends on the storage driver', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/update/

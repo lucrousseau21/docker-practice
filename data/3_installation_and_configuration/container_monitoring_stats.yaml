@@ -1,0 +1,135 @@
+questions:
+  - uuid: a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d
+    question: What command displays real-time resource usage statistics for running containers?
+    answers:
+      - { value: 'docker stats', correct: true }
+      - { value: 'docker monitor', correct: false }
+      - { value: 'docker top', correct: false }
+      - { value: 'docker ps --stats', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stats/
+
+  - uuid: b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e
+    question: Which metrics does `docker stats` display by default?
+    answers:
+      - { value: 'CPU, memory, network I/O, block I/O, PIDs', correct: true }
+      - { value: 'Only CPU and memory usage', correct: false }
+      - { value: 'CPU, memory, and disk space', correct: false }
+      - { value: 'All system metrics including kernel parameters', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stats/
+
+  - uuid: c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f
+    question: How do you display stats for only specific containers?
+    answers:
+      - { value: 'docker stats <container1> <container2>', correct: true }
+      - { value: 'docker stats --filter container=name', correct: false }
+      - { value: 'docker stats --only <container>', correct: false }
+      - { value: 'docker stats --select <container>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stats/
+
+  - uuid: d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a
+    question: What flag makes `docker stats` display a single snapshot instead of streaming?
+    answers:
+      - { value: '--once', correct: false }
+      - { value: '--snapshot', correct: false }
+      - { value: '--no-stream', correct: true }
+      - { value: '--single', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stats/
+
+  - uuid: e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b
+    question: How can you format the output of `docker stats` to show only CPU and memory?
+    answers:
+      - { value: 'docker stats --format "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}"', correct: true }
+      - { value: 'docker stats --fields cpu,memory', correct: false }
+      - { value: 'docker stats --columns cpu,mem', correct: false }
+      - { value: 'docker stats --show cpu,memory', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stats/
+
+  - uuid: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c
+    question: What does the MEM % column in `docker stats` represent?
+    answers:
+      - { value: 'Percentage of container memory limit used', correct: false }
+      - { value: 'Percentage of total host memory used by the container', correct: true }
+      - { value: 'Percentage of swap memory used', correct: false }
+      - { value: 'Percentage of cache memory used', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stats/
+
+  - uuid: a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d
+    question: How do you view the processes running inside a specific container?
+    answers:
+      - { value: 'docker top <container>', correct: true }
+      - { value: 'docker ps <container>', correct: false }
+      - { value: 'docker exec <container> ps', correct: false }
+      - { value: 'docker inspect --processes <container>', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/top/
+
+  - uuid: b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e
+    question: Can you use `docker top` to run custom ps commands?
+    answers:
+      - { value: 'Yes, by passing ps arguments like: docker top <container> aux', correct: true }
+      - { value: 'No, docker top only shows default ps output', correct: false }
+      - { value: 'Only with the --custom flag', correct: false }
+      - { value: 'Only in privileged mode', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/top/
+
+  - uuid: c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f
+    question: What is the difference between `docker stats` and `docker top`?
+    answers:
+      - { value: 'docker stats shows resource usage; docker top shows running processes', correct: true }
+      - { value: 'docker stats is for Swarm; docker top is for standalone containers', correct: false }
+      - { value: 'docker stats shows historical data; docker top shows real-time', correct: false }
+      - { value: 'There is no difference, they are aliases', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stats/
+
+  - uuid: d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a
+    question: Which command shows disk usage by Docker objects (images, containers, volumes)?
+    answers:
+      - { value: 'docker disk usage', correct: false }
+      - { value: 'docker system df', correct: true }
+      - { value: 'docker stats --disk', correct: false }
+      - { value: 'docker info --storage', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/system/df/
+
+  - uuid: e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b
+    question: What does `docker system df -v` display?
+    answers:
+      - { value: 'Verbose output with detailed breakdown of space usage per object', correct: true }
+      - { value: 'Only volume usage statistics', correct: false }
+      - { value: 'Version information about Docker storage', correct: false }
+      - { value: 'Virtual filesystem usage', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/system/df/
+
+  - uuid: f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c
+    question: How can you monitor events happening in Docker in real-time?
+    answers:
+      - { value: 'docker events', correct: true }
+      - { value: 'docker monitor', correct: false }
+      - { value: 'docker logs --system', correct: false }
+      - { value: 'docker watch', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/system/events/
+
+  - uuid: a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d
+    question: What information does `docker info` provide?
+    answers:
+      - { value: 'System-wide information about Docker installation and configuration', correct: true }
+      - { value: 'Only information about running containers', correct: false }
+      - { value: 'Version information only', correct: false }
+      - { value: 'Network configuration details only', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/system/info/
+
+  - uuid: b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e
+    question: Does `docker stats` work on stopped containers?
+    answers:
+      - { value: 'No, it only shows stats for running containers', correct: true }
+      - { value: 'Yes, it shows historical stats', correct: false }
+      - { value: 'Yes, but only with --all flag', correct: false }
+      - { value: 'Only for recently stopped containers', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stats/
+
+  - uuid: c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f
+    question: What does the NET I/O column in `docker stats` show?
+    answers:
+      - { value: 'Network bytes sent and received by the container', correct: true }
+      - { value: 'Number of network connections', correct: false }
+      - { value: 'Network latency in milliseconds', correct: false }
+      - { value: 'Network bandwidth allocation', correct: false }
+    help: https://docs.docker.com/reference/cli/docker/container/stats/

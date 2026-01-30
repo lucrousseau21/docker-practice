@@ -1,0 +1,144 @@
+questions:
+  - uuid: a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d
+    question: What flag limits the memory a container can use?
+    answers:
+      - { value: '--memory or -m', correct: true }
+      - { value: '--mem-limit', correct: false }
+      - { value: '--max-memory', correct: false }
+      - { value: '--ram', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e
+    question: How do you limit a container to 2 CPU cores?
+    answers:
+      - { value: '--cpus=2', correct: true }
+      - { value: '--cpu-cores=2', correct: false }
+      - { value: '--cpu-limit=2', correct: false }
+      - { value: '--max-cpus=2', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f
+    question: What does the `--memory-swap` flag control?
+    answers:
+      - { value: 'Total memory limit including swap (memory + swap)', correct: true }
+      - { value: 'Only swap memory, separate from main memory limit', correct: false }
+      - { value: 'The swap priority for the container', correct: false }
+      - { value: 'Whether swap is enabled or disabled', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a
+    question: How do you disable swap for a container?
+    answers:
+      - { value: 'Set --memory-swap equal to --memory', correct: true }
+      - { value: 'Use --no-swap flag', correct: false }
+      - { value: 'Set --memory-swap to 0', correct: false }
+      - { value: 'Use --disable-swap flag', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b
+    question: What is the purpose of `--cpu-shares`?
+    answers:
+      - { value: 'Sets the relative CPU weight for scheduling when CPU is constrained', correct: true }
+      - { value: 'Limits absolute CPU usage percentage', correct: false }
+      - { value: 'Distributes CPU time equally among containers', correct: false }
+      - { value: 'Sets the number of CPU cores to use', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c
+    question: What is the default value for `--cpu-shares`?
+    answers:
+      - { value: '1024', correct: true }
+      - { value: '100', correct: false }
+      - { value: '512', correct: false }
+      - { value: '0 (unlimited)', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d
+    question: What happens when a container exceeds its memory limit?
+    answers:
+      - { value: 'The kernel OOM killer terminates processes in the container', correct: true }
+      - { value: 'The container is automatically paused', correct: false }
+      - { value: 'Docker swaps the excess to disk', correct: false }
+      - { value: 'The memory limit is automatically increased', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e
+    question: How do you reserve a minimum amount of memory for a container?
+    answers:
+      - { value: '--memory-reservation', correct: true }
+      - { value: '--memory-min', correct: false }
+      - { value: '--min-memory', correct: false }
+      - { value: '--memory-guarantee', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: c9d0e1f2-a3b4-5c6d-7e8f-9a0b1c2d3e4f
+    question: What does `--cpus=0.5` mean?
+    answers:
+      - { value: 'The container can use at most 50% of one CPU core', correct: true }
+      - { value: 'The container gets half the CPU priority', correct: false }
+      - { value: 'The container can use half of all available CPUs', correct: false }
+      - { value: 'Invalid syntax, must be integer', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: d0e1f2a3-b4c5-6d7e-8f9a-0b1c2d3e4f5a
+    question: How can you limit which CPU cores a container can use?
+    answers:
+      - { value: '--cpuset-cpus', correct: true }
+      - { value: '--cpu-cores', correct: false }
+      - { value: '--cpu-affinity', correct: false }
+      - { value: '--cpu-pin', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: e1f2a3b4-c5d6-7e8f-9a0b-1c2d3e4f5a6b
+    question: What is the `--pids-limit` flag used for?
+    answers:
+      - { value: 'Limits the number of processes/threads the container can create', correct: true }
+      - { value: 'Limits the number of child containers', correct: false }
+      - { value: 'Sets the process priority', correct: false }
+      - { value: 'Limits the number of connections', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c
+    question: How do you set a block I/O weight for a container?
+    answers:
+      - { value: '--blkio-weight (value between 10-1000)', correct: true }
+      - { value: '--io-weight', correct: false }
+      - { value: '--disk-priority', correct: false }
+      - { value: '--io-priority', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d
+    question: What flag limits the read rate from a specific device?
+    answers:
+      - { value: '--device-read-bps', correct: true }
+      - { value: '--read-limit', correct: false }
+      - { value: '--io-read-limit', correct: false }
+      - { value: '--device-read-limit', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e
+    question: Can resource limits be set in docker-compose.yml files?
+    answers:
+      - { value: 'Yes, using the deploy.resources section', correct: true }
+      - { value: 'No, only via docker run flags', correct: false }
+      - { value: 'Only for Swarm services', correct: false }
+      - { value: 'Only with Docker Compose v1', correct: false }
+    help: https://docs.docker.com/compose/compose-file/deploy/
+
+  - uuid: c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f
+    question: What is the default behavior if no memory limit is set?
+    answers:
+      - { value: 'Container can use all available host memory', correct: true }
+      - { value: 'Container is limited to 1GB by default', correct: false }
+      - { value: 'Container is limited to 50% of host memory', correct: false }
+      - { value: 'Container gets a proportional share based on number of containers', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
+
+  - uuid: d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a
+    question: How do you set both a soft and hard memory limit for better OOM handling?
+    answers:
+      - { value: 'Use both --memory-reservation (soft) and --memory (hard)', correct: true }
+      - { value: 'Use --memory-soft and --memory-hard', correct: false }
+      - { value: 'Use --memory-min and --memory-max', correct: false }
+      - { value: 'Only hard limits are supported', correct: false }
+    help: https://docs.docker.com/config/containers/resource_constraints/
