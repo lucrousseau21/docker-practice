@@ -24,7 +24,7 @@ questions:
       - { value: 'bridge, host, none', correct: true }
       - { value: 'macvlan only', correct: false }
       - { value: 'All network drivers', correct: false }
-    help: https://docs.docker.com/network/drivers/
+    help: https://docs.docker.com/engine/network/
 
   - uuid: 172ec5ae-6de7-4593-918a-016b60103bfb
     question: What does the 'swarm' network scope indicate?

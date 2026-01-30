@@ -6,7 +6,7 @@ questions:
       - { value: 'To provide mandatory access control and label-based security', correct: true }
       - { value: 'To encrypt container data', correct: false }
       - { value: 'To manage container lifecycle', correct: false }
-    help: https://docs.docker.com/engine/security/selinux/
+    help: https://docs.docker.com/engine/security/
 
   - uuid: cbf9872f-6179-4559-a600-7a99ece4304f
     question: How do you enable SELinux labeling for a container?
@@ -87,7 +87,7 @@ questions:
       - { value: 'To control file access permissions for containerized processes', correct: true }
       - { value: 'To configure networking', correct: false }
       - { value: 'To set resource limits', correct: false }
-    help: https://docs.docker.com/engine/security/selinux/
+    help: https://docs.docker.com/engine/security/
 
   - uuid: a54b9287-0838-4aed-ba22-e467d3f1b0d2
     question: Which Linux distributions commonly use SELinux with Docker?
@@ -96,4 +96,4 @@ questions:
       - { value: 'RHEL, CentOS, and Fedora', correct: true }
       - { value: 'Alpine Linux', correct: false }
       - { value: 'Windows Subsystem for Linux', correct: false }
-    help: https://docs.docker.com/engine/security/selinux/
+    help: https://docs.docker.com/engine/security/
