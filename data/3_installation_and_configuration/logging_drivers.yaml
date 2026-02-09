@@ -6,7 +6,7 @@ questions:
       - { value: '--driver-log', correct: false }
       - { value: '--log', correct: false }
       - { value: '--log-driver', correct: true }
-    help: https://docs.docker.com/config/containers/logging/configure/
+    help: https://docs.docker.com/engine/logging/configure/
 
   - uuid: 43fd04d9-df6b-4f17-b682-46429a24a537
     question: Which file configures the default global log driver?
@@ -15,7 +15,7 @@ questions:
       - { value: '/etc/docker/containers/logging.conf', correct: false }
       - { value: '/etc/logging.conf', correct: false }
       - { value: '/etc/docker/daemon.json', correct: true }
-    help: https://docs.docker.com/config/containers/logging/configure/
+    help: https://docs.docker.com/engine/logging/configure/
 
   - uuid: a0629d6c-313c-4e3b-a2d2-e1122859c3f5
     question: Which value sets `journald` as the log driver for a Docker container?
@@ -24,7 +24,7 @@ questions:
       - { value: 'docker-logs', correct: false }
       - { value: 'syslogd', correct: false }
       - { value: 'systemd-logs', correct: false }
-    help: https://docs.docker.com/config/containers/logging/journald/
+    help: https://docs.docker.com/engine/logging/drivers/journald/
 
   - uuid: 50e888f9-d205-4de7-8054-bb7409d504d6
     question: What is Docker’s default log driver?
@@ -33,7 +33,7 @@ questions:
       - { value: 'journald', correct: false }
       - { value: 'syslog', correct: false }
       - { value: 'json-file', correct: true }
-    help: https://docs.docker.com/config/containers/logging/configure/
+    help: https://docs.docker.com/engine/logging/configure/
 
   - uuid: 5d3c3e90-0f03-4f2e-9d02-b8d52ed9f146
     question: Which JSON configuration sets journald as the global log driver?
@@ -42,7 +42,7 @@ questions:
       - { value: '{ `driver`: `journald` }', correct: false }
       - { value: '{ `log-driver`: `journald` }', correct: true }
       - { value: '{ `logs`: `journald` }', correct: false }
-    help: https://docs.docker.com/config/containers/logging/configure/
+    help: https://docs.docker.com/engine/logging/configure/
 
   - uuid: 1ec259ae-b1f6-4a4d-91f2-697d63b37823
     question: Which log driver is used to send logs to a Splunk instance?
@@ -51,7 +51,7 @@ questions:
       - { value: 'splunk', correct: true }
       - { value: 'fluentd', correct: false }
       - { value: 'gelf', correct: false }
-    help: https://docs.docker.com/config/containers/logging/splunk/
+    help: https://docs.docker.com/engine/logging/drivers/splunk/
 
   - uuid: 91e16669-03b9-47ef-a93e-7e6c84cf4fe4
     question: Which parameter is required for the `splunk` driver?
@@ -60,7 +60,7 @@ questions:
       - { value: 'splunk-port', correct: false }
       - { value: 'splunk-token', correct: true }
       - { value: 'splunk-password', correct: false }
-    help: https://docs.docker.com/config/containers/logging/splunk/
+    help: https://docs.docker.com/engine/logging/drivers/splunk/
 
   - uuid: b0b7b3d6-dca0-40d7-881a-e0d1e8e6d7c7
     question: Which command allows you to launch a container with a custom log driver?
@@ -69,7 +69,7 @@ questions:
       - { value: 'docker run --log-driver=syslog nginx', correct: true }
       - { value: 'docker logs --driver=syslog nginx', correct: false }
       - { value: 'docker create --log=syslog nginx', correct: false }
-    help: https://docs.docker.com/config/containers/logging/configure/
+    help: https://docs.docker.com/engine/logging/configure/
 
   - uuid: 03e1fa7d-1e62-4ea3-a07f-b8912c51bb77
     question: What happens if a log driver is misconfigured when launching a container?
@@ -78,7 +78,7 @@ questions:
       - { value: "Docker launches the container with syslog as fallback", correct: false }
       - { value: "The container does not start and an error is displayed", correct: true }
       - { value: "The container starts but the logs are lost", correct: false }
-    help: https://docs.docker.com/config/containers/logging/configure/
+    help: https://docs.docker.com/engine/logging/configure/
 
   - uuid: 17b2435a-4b75-423c-85ec-e24a91b2ad52
     question: Which log driver completely ignores the logs of a container?

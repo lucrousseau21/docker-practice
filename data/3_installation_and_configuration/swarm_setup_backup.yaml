@@ -6,7 +6,7 @@ questions:
       - { value: 'docker swarm create', correct: false }
       - { value: 'docker cluster init', correct: false }
       - { value: 'docker swarm init', correct: true }
-    help: https://docs.docker.com/engine/reference/commandline/swarm_init/
+    help: https://docs.docker.com/reference/cli/docker/swarm/init/
 
   - uuid: e1cd0de6-6f4f-4e41-a0c6-63ce3e6e39fd
     question: Which command lets another node join a Swarm cluster as a worker?
@@ -15,7 +15,7 @@ questions:
       - { value: 'docker node join worker', correct: false }
       - { value: 'docker swarm join --token <worker-token> <manager-ip>:2377', correct: true }
       - { value: 'docker swarm attach', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/swarm_join/
+    help: https://docs.docker.com/reference/cli/docker/swarm/join/
 
   - uuid: 63a25dc4-0164-4c28-b4cf-139017a57939
     question: Which command promotes a worker node to manager?
@@ -24,7 +24,7 @@ questions:
       - { value: 'docker swarm promote <node>', correct: false }
       - { value: 'docker manager add <node>', correct: false }
       - { value: 'docker node promote <node>', correct: true }
-    help: https://docs.docker.com/engine/reference/commandline/node_promote/
+    help: https://docs.docker.com/reference/cli/docker/node/promote/
 
   - uuid: 2e9eeadd-14ea-4038-82cd-0192a25f8b6c
     question: What does the `docker swarm join-token` command do?
@@ -33,7 +33,7 @@ questions:
       - { value: 'Show Swarm service logs', correct: false }
       - { value: 'Configure cluster listening ports', correct: false }
       - { value: 'Display or regenerate the token to join a Swarm cluster', correct: true }
-    help: https://docs.docker.com/engine/reference/commandline/swarm_join_token/
+    help: https://docs.docker.com/reference/cli/docker/swarm/join-token/
 
   - uuid: 44c3eb41-e7c7-4a16-aee3-1ee5c5cf41cb
     question: What is the minimum number of managers required for a Swarm cluster to maintain quorum?
@@ -78,7 +78,7 @@ questions:
       - { value: 'List nodes and their roles (manager/worker)', correct: true }
       - { value: 'List registries in use', correct: false }
       - { value: 'List volumes attached to containers', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/node_ls/
+    help: https://docs.docker.com/reference/cli/docker/node/ls/
 
   - uuid: 70a10577-6ee7-456c-a77a-23c8e46f9c36
     question: Can a worker node be used to schedule a global service in Swarm?

@@ -15,7 +15,7 @@ questions:
       - { value: '~/.docker/config.json', correct: true }
       - { value: '/etc/default/docker', correct: false }
       - { value: '~/.bashrc', correct: false }
-    help: https://docs.docker.com/network/proxy/
+    help: https://docs.docker.com/engine/cli/proxy/
 
   - uuid: fef6b35f-f2c1-475e-82b4-62049ba12732
     question: Which environment variable is used to specify hosts that should bypass the proxy for the Docker daemon?
@@ -42,7 +42,7 @@ questions:
       - { value: 'network', correct: false }
       - { value: 'proxies', correct: true }
       - { value: 'httpSettings', correct: false }
-    help: https://docs.docker.com/network/proxy/
+    help: https://docs.docker.com/engine/cli/proxy/
 
   - uuid: d3f070b3-0919-4551-807c-c6a63c0fe440
     question: When proxy settings are configured in ~/.docker/config.json, how are they passed to containers?
@@ -51,4 +51,4 @@ questions:
       - { value: 'As environment variables injected automatically into the container', correct: true }
       - { value: 'As arguments appended to the container entrypoint', correct: false }
       - { value: 'As DNS records resolved by the Docker embedded DNS server', correct: false }
-    help: https://docs.docker.com/network/proxy/
+    help: https://docs.docker.com/engine/cli/proxy/

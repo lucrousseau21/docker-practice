@@ -33,7 +33,7 @@ questions:
       - { value: 'To define user permissions in containers', correct: false }
       - { value: 'To configure volume mounts', correct: false }
       - { value: 'To isolate system calls', correct: false }
-    help: https://docs.docker.com/config/containers/resource_constraints/
+    help: https://docs.docker.com/engine/containers/resource_constraints/
 
   - uuid: 96b74db1-3736-4d0a-b1f6-12c258a5cb91
     question: Which of the following resources can be limited using cgroups?
@@ -42,7 +42,7 @@ questions:
       - { value: 'Network encryption', correct: false }
       - { value: 'Shell access', correct: false }
       - { value: 'CPU, memory, and I/O', correct: true }
-    help: https://docs.docker.com/config/containers/resource_constraints/
+    help: https://docs.docker.com/engine/containers/resource_constraints/
 
   - uuid: afdc1dc0-e24d-47ff-9252-991fa4e16b4b
     question: Which Docker flags configure cgroup limits for memory and CPU?
@@ -51,7 +51,7 @@ questions:
       - { value: '--isolate and --ns', correct: false }
       - { value: '--limit and --priority', correct: false }
       - { value: '--quota and --shares', correct: false }
-    help: https://docs.docker.com/config/containers/resource_constraints/
+    help: https://docs.docker.com/engine/containers/resource_constraints/
 
   - uuid: 8ae69b41-06f0-44d2-b7ee-16a4e05bc758
     question: What is the role of certificates in Docker Engine TLS configuration?
@@ -60,7 +60,7 @@ questions:
       - { value: 'To generate Dockerfile builds', correct: false }
       - { value: 'To define swarm services', correct: false }
       - { value: 'To set resource limits', correct: false }
-    help: https://docs.docker.com/engine/security/https/
+    help: https://docs.docker.com/engine/security/protect-access/
 
   - uuid: 7627588e-c546-43d1-b8d4-5d38371981c7
     question: What command-line options are used to enable TLS on the Docker daemon?
@@ -69,7 +69,7 @@ questions:
       - { value: '--enable-https --auth-cert --auth-key', correct: false }
       - { value: '--tlsverify --tlscacert --tlscert --tlskey', correct: true }
       - { value: '--tlsauth --certpath --keyfile', correct: false }
-    help: https://docs.docker.com/engine/security/https/
+    help: https://docs.docker.com/engine/security/protect-access/
 
   - uuid: d3c65bc2-15db-474e-b16e-1850d5888499
     question: Which certificate file is used to verify the client identity?
@@ -78,7 +78,7 @@ questions:
       - { value: 'server-key.pem', correct: false }
       - { value: 'ca.pem', correct: false }
       - { value: 'client-cert.pem', correct: true }
-    help: https://docs.docker.com/engine/security/https/
+    help: https://docs.docker.com/engine/security/protect-access/
 
   - uuid: 1cc17ed0-2f0d-4a6a-9270-913415ef2b49
     question: What happens if a client connects without a valid certificate and TLS is enabled?
@@ -87,4 +87,4 @@ questions:
       - { value: 'The connection is downgraded to HTTP', correct: false }
       - { value: 'The connection is refused', correct: true }
       - { value: 'Docker prompts for manual approval', correct: false }
-    help: https://docs.docker.com/engine/security/https/
+    help: https://docs.docker.com/engine/security/protect-access/

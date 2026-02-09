@@ -42,7 +42,7 @@ questions:
       - { value: 'The docker-authz plugin must be enabled', correct: false }
       - { value: 'It is automatic if TLS is enabled', correct: false }
       - { value: 'The registry must expose port 2376', correct: false }
-    help: https://docs.docker.com/registry/deploying/
+    help: https://docs.docker.com/guides/docker-concepts/the-basics/what-is-a-registry/
 
   - uuid: 7d146e2c-b1f2-4397-a3ee-10f55b90c404
     question: Which secure port is used by default for private Docker registries with TLS?
@@ -51,7 +51,7 @@ questions:
       - { value: '2376', correct: false }
       - { value: '443', correct: true }
       - { value: '5000', correct: false }
-    help: https://docs.docker.com/registry/insecure/
+    help: https://docs.docker.com/engine/security/certificates/
 
   - uuid: 1765e25a-12d3-4f61-993a-4d39487fd6a6
     question: Once certificates are properly configured, what does `docker pull myregistry.com/myimage` allow?
@@ -78,7 +78,7 @@ questions:
       - { value: 'docker tls check myregistry.com', correct: false }
       - { value: 'openssl cert validate myregistry.com', correct: false }
       - { value: 'nc -tls myregistry.com 443', correct: false }
-    help: https://docs.docker.com/registry/deploying/#verify-using-curl
+    help: https://docs.docker.com/guides/docker-concepts/the-basics/what-is-a-registry/#verify-using-curl
 
   - uuid: 33c15c25-2a1d-4b29-91e7-bb0a1aa730e6
     question: Do you need to restart the Docker daemon after adding certificates?
