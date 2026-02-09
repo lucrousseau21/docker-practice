@@ -24,7 +24,7 @@ questions:
       - { value: 'btrfs', correct: false }
       - { value: 'aufs', correct: false }
       - { value: 'overlay2', correct: true }
-    help: https://docs.docker.com/storage/storagedriver/overlayfs-driver/
+    help: https://docs.docker.com/engine/storage/drivers/overlayfs-driver/
 
   - uuid: 67a48e29-32c3-4267-a931-c08b3cb0531b
     question: For DTR (Docker Trusted Registry, now MSR), what is the minimum disk space required per node?
@@ -33,7 +33,7 @@ questions:
       - { value: '100 GB', correct: true }
       - { value: '10 GB', correct: false }
       - { value: '20 GB', correct: false }
-    help: https://docs.docker.com/ee/dtr/admin/install/system-requirements/
+    help: https://docs.docker.com/engine/install/
 
   - uuid: 5a75c1b2-0cbd-4fc2-83cf-1f189d84cc13
     question: Why is it recommended to run Docker on a 64-bit operating system?
@@ -51,7 +51,7 @@ questions:
       - { value: 'The number and size of container images and volumes', correct: true }
       - { value: 'The number of CPUs available', correct: false }
       - { value: 'The number of open ports', correct: false }
-    help: https://docs.docker.com/storage/
+    help: https://docs.docker.com/engine/storage/
 
   - uuid: b47a5e44-6c70-4534-a689-5ac4486938db
     question: Which of the following is a supported Linux distribution for production Docker deployments?
@@ -69,7 +69,7 @@ questions:
       - { value: 'It causes slow container startup', correct: false }
       - { value: 'Root volumes do not support overlay drivers', correct: false }
       - { value: "Security scanners can't access root volumes", correct: false }
-    help: https://docs.docker.com/storage/
+    help: https://docs.docker.com/engine/storage/
 
   - uuid: 05176b68-5a8b-4814-8753-ffec40440f12
     question: What is the typical port required to access UCP (now MKE) via a browser?

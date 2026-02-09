@@ -6,7 +6,7 @@ questions:
       - { value: '/etc/docker/daemon.json', correct: true }
       - { value: '/usr/local/docker/daemon.conf', correct: false }
       - { value: '/etc/default/docker.json', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
+    help: https://docs.docker.com/reference/cli/dockerd/
 
   - uuid: b4e6f8a2-9c13-4d75-a0b8-7e2f5d3c1a96
     question: Which key in daemon.json is used to configure insecure registries?
@@ -15,7 +15,7 @@ questions:
       - { value: 'registry-mirrors', correct: false }
       - { value: 'insecure-registries', correct: true }
       - { value: 'no-tls-registries', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/dockerd/#insecure-registries
+    help: https://docs.docker.com/reference/cli/dockerd/
 
   - uuid: c7a9d1e5-3b46-4f82-9d0c-8a6e2f4b7c53
     question: How do you enable debug mode in the Docker daemon using daemon.json?
@@ -24,7 +24,7 @@ questions:
       - { value: 'Set "debug": true', correct: true }
       - { value: 'Set "verbose": true', correct: false }
       - { value: 'Set "mode": "debug"', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
+    help: https://docs.docker.com/reference/cli/dockerd/
 
   - uuid: d2f4b8c6-1e73-4a59-b6d0-5c9a3e7f2d18
     question: What happens if the same option is set both in daemon.json and as a dockerd command-line flag?
@@ -33,7 +33,7 @@ questions:
       - { value: 'The command-line flag takes precedence', correct: false }
       - { value: 'Docker fails to start and reports a configuration conflict', correct: true }
       - { value: 'Docker merges both values together', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
+    help: https://docs.docker.com/reference/cli/dockerd/
 
   - uuid: e5a1c3d7-8b29-4f6e-a4c2-6d0b9e7f3a85
     question: Which signal can be sent to the Docker daemon to reload daemon.json without restarting the daemon?
@@ -42,7 +42,7 @@ questions:
       - { value: 'SIGKILL', correct: false }
       - { value: 'SIGHUP', correct: true }
       - { value: 'SIGUSR1', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
+    help: https://docs.docker.com/reference/cli/dockerd/
 
   - uuid: f8b2d4e6-0a57-4c91-b3e5-9f1a7c6d2b48
     question: Which key in daemon.json is used to configure custom DNS servers for all containers?
@@ -51,7 +51,7 @@ questions:
       - { value: 'dns', correct: true }
       - { value: 'resolv-conf', correct: false }
       - { value: 'dns-servers', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
+    help: https://docs.docker.com/reference/cli/dockerd/
 
   - uuid: 1a3c5e7b-2d49-4f80-96a1-8b0e4f6c3d72
     question: Which daemon.json key allows you to define default subnet pools for user-defined bridge networks?
@@ -60,7 +60,7 @@ questions:
       - { value: 'bridge-subnets', correct: false }
       - { value: 'default-address-pools', correct: true }
       - { value: 'network-pools', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
+    help: https://docs.docker.com/reference/cli/dockerd/
 
   - uuid: 2b4d6f8a-3e51-4c92-a7b2-9c1f5e7d4a63
     question: Which daemon.json options can be reloaded with SIGHUP without restarting the Docker daemon?
@@ -69,4 +69,4 @@ questions:
       - { value: 'debug, labels, and insecure-registries', correct: true }
       - { value: 'iptables and ip-forward', correct: false }
       - { value: 'All daemon.json options can be reloaded without restart', correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
+    help: https://docs.docker.com/reference/cli/dockerd/
