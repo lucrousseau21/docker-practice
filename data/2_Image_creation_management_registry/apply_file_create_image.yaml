@@ -60,7 +60,7 @@ questions:
       - { value: 'In the same or a parent directory of the build context', correct: true }
       - { value: 'In a different directory outside the context', correct: false }
       - { value: 'In the same directory as the Docker daemon', correct: false }
-    help: 'https://docs.docker.com/reference/cli/docker/buildx/build/#dockerignore-file'
+    help: 'https://docs.docker.com/build/concepts/context/'
 
   - uuid: 6ae4b58f-d5bb-4706-95df-53d7b2c03e1a
     question: How can you exclude files from being sent to the Docker daemon during a build?

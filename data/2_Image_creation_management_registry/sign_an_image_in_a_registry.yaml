@@ -87,7 +87,7 @@ questions:
       - { value: 'docker image inspect imagename --signatures', correct: false }
       - { value: 'docker trust inspect --pretty imagename', correct: true }
       - { value: 'docker trust list imagename', correct: false }
-    help: https://docs.docker.com/engine/security/trust/trust_delegation/#view-signed-images
+    help: https://docs.docker.com/reference/cli/docker/trust/inspect/
 
   - uuid: 97f8f65a-3df1-4ab5-95c9-c5d146dfbd91
     question: What is the purpose of delegating signing responsibilities in Docker Content Trust?

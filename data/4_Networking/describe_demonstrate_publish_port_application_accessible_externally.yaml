@@ -78,7 +78,7 @@ questions:
       - { value: 'It prevents the port from being used', correct: false }
       - { value: 'It binds the port to a host port, allowing external access', correct: true }
       - { value: 'It makes the port internal-only', correct: false }
-    help: https://docs.docker.com/config/containers/container-networking/#accessing-external-ports
+    help: https://docs.docker.com/engine/network/port-publishing/
 
   - uuid: 170920af-1a99-44df-8728-d54fdb41c993
     question: What happens if you omit the host port in `-p :80`?
@@ -105,7 +105,7 @@ questions:
       - { value: '`publish` under `networks:`', correct: false }
       - { value: '`ports` key under the service definition', correct: true }
       - { value: '`-p` in the `command:`', correct: false }
-    help: https://docs.docker.com/compose/compose-file/compose-file-v3/#ports
+    help: https://docs.docker.com/reference/compose-file/services/#ports
 
   - uuid: 7994dfeb-ecf2-40a3-96b9-9b0e4fbbd9d3
     question: In Docker Compose, how do you restrict a published port to localhost?
@@ -123,7 +123,7 @@ questions:
       - { value: 'Only in Swarm mode', correct: false }
       - { value: 'Only with `--network host`', correct: false }
       - { value: 'No, Docker blocks duplicate mappings', correct: false }
-    help: https://docs.docker.com/config/containers/container-networking/#published-ports
+    help: https://docs.docker.com/engine/network/port-publishing/
 
   - uuid: 5c6a89de-df23-4ff3-a5b1-836be317fbea
     question: Why should you avoid publishing unnecessary ports in production?

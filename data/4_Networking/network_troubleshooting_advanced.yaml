@@ -51,7 +51,7 @@ questions:
       - { value: 'docker network capture <container>', correct: false }
       - { value: 'Run tcpdump inside the container using docker exec, provided tcpdump is installed in the container image', correct: true }
       - { value: 'Use docker inspect --packet-trace <container>', correct: false }
-    help: https://docs.docker.com/engine/network/tutorials/standalone/
+    help: https://docs.docker.com/reference/cli/docker/container/exec/
 
   - uuid: c7eb31f8-5bc2-4d9a-8ae1-3fab6c4d7ef9
     question: A container cannot reach external services on the internet. Which of the following should you check first?
@@ -69,4 +69,4 @@ questions:
       - { value: "docker network inspect --format '{{range .IPAM.Config}}{{.Subnet}}{{end}}' my-network", correct: true }
       - { value: "docker network inspect --format '{{.NetworkSettings.Subnet}}' my-network", correct: false }
       - { value: "docker network inspect --format '{{.Config.IPAM.Subnet}}' my-network", correct: false }
-    help: https://docs.docker.com/engine/reference/commandline/network_inspect/
+    help: https://docs.docker.com/reference/cli/docker/network/inspect/

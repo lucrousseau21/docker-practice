@@ -15,7 +15,7 @@ questions:
       - { value: 'UCP (now MKE) routing mesh', correct: false }
       - { value: 'Docker Daemon Proxy', correct: false }
       - { value: 'Interlock with NGINX', correct: true }
-    help: https://docs.mirantis.com/docker-enterprise/v3.1/dockeree-products/interlock/architecture.html
+    help: https://docs.mirantis.com/mke/3.4/ops/deploy-apps-swarm/interlock/layer-7-routing.html
 
   - uuid: 25aa1e52-5a0c-4b64-89d4-f9d7c0422c1d
     question: In Interlock, what annotation is used to define the virtual host for a service?

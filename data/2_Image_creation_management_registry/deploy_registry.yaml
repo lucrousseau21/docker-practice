@@ -51,7 +51,7 @@ questions:
       - { value: '/usr/bin/dockerd', correct: false }
       - { value: '/etc/docker/daemon.json', correct: true }
       - { value: '~/.docker/config.json', correct: false }
-    help: 'https://docs.docker.com/registry/insecure/'
+    help: 'https://docs.docker.com/reference/cli/dockerd/#insecure-registries'
 
   - uuid: b7e4c63d-dde0-4063-9f1a-507a98cb0b11
     question: Which of the following is required to make a private registry production-ready?
